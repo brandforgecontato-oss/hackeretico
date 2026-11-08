@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hacker Ético em 30 Dias</title>
+<meta name="description" content="Se torne um hacker ético em 30 dias e fature ajudando as empresas a se defenderem na era da IA. Por apenas R$ 97 ou 12x.">
+<meta property="og:title" content="Se torne um Hacker Ético em 30 dias">
+<meta property="og:description" content="Fature ajudando as empresas a se defenderem na era da IA. Apenas R$ 97.">
+<meta property="og:image" content="capa-curso.jpg">
+<meta name="theme-color" content="#050505">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#050505; --bg-2:#090b0a; --card:#0e1210;
+  --line:#233027; --line-soft:#161d18;
+  --ink:#f0f6f1; --muted:#96a69b;
+  --green:#35e07a; --green-dim:#1fa85a; --green-light:#8be09a; --green-deep:#0a4a24;
+  --on-green:#04150b; --glow:#35e07a99; --glow-soft:#35e07a4d; --red:#e5484d;
+  --display:"Anton",Impact,"Arial Narrow",sans-serif;
+  --sans:"Inter",system-ui,-apple-system,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,"SF Mono",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{width:100%;max-width:1120px;margin-inline:auto;padding-inline:20px}
+@media(min-width:640px){.wrap{padding-inline:32px}}
+.g{color:var(--green)}
+.display{font-family:var(--display);text-transform:uppercase;font-weight:400;line-height:.95;letter-spacing:.005em}
+.eyebrow{font-family:var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--green);font-size:11px}
+.muted{color:var(--muted)}
+.strike{color:var(--muted);position:relative;white-space:nowrap}
+.strike:after{content:"";background:currentColor;height:1.5px;position:absolute;top:52%;left:-2%;right:-2%}
+.dot{display:inline-block;background:var(--green);width:8px;height:8px;border-radius:999px;box-shadow:0 0 12px 2px var(--glow);animation:blink 2s ease-in-out infinite}
+@keyframes blink{50%{opacity:.35}}
+section{position:relative}
+.sec{padding:80px 0}
+@media(min-width:640px){.sec{padding:112px 0}}
+.center{text-align:center}
+h2.display{font-size:clamp(40px,7vw,80px);margin-top:12px}
+.lead{max-width:580px;margin:16px auto 0;font-size:17px;color:var(--muted)}
+
+/* CTA */
+.cta{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-family:var(--display);text-transform:uppercase;letter-spacing:.04em;line-height:1;
+  background:var(--green-dim);color:#fff;border-radius:12px;padding:20px 32px;font-size:20px;
+  border:1.5px solid rgba(53,224,122,.6);box-shadow:0 0 0 0 var(--glow),0 10px 40px -10px var(--glow);
+  transition:transform .2s, box-shadow .2s, background .2s;overflow:hidden;text-align:center}
+.cta:hover{transform:translateY(-2px);background:#22b862;box-shadow:0 0 0 4px rgba(53,224,122,.15),0 14px 50px -8px var(--glow)}
+.cta:after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.28) 50%,transparent 70%);transform:translateX(-100%);animation:shine 3.2s ease-in-out infinite}
+@keyframes shine{60%,100%{transform:translateX(100%)}}
+.cta-full{width:100%}
+@media(min-width:640px){.cta-full{width:auto}}
+.cta small{font-family:var(--sans);font-size:12px;text-transform:none;letter-spacing:0;opacity:.85}
+
+/* Header */
+header{border-bottom:1px solid var(--line-soft);background:var(--bg)}
+.hdr{display:flex;flex-direction:column;align-items:center;gap:12px;padding-block:16px}
+.logo{font-family:var(--display);text-transform:uppercase;font-size:24px;line-height:1}
+.pill{display:inline-flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 12px;border:1px solid var(--line);background:var(--card);border-radius:12px;padding:8px 16px}
+.pill .tag{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--green);white-space:nowrap}
+.pill .lbl{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+.timer{display:inline-flex;align-items:baseline;gap:6px;font-family:var(--display);color:var(--green);font-size:18px;font-variant-numeric:tabular-nums}
+.timer i{font-style:normal;font-family:var(--mono);font-size:10px;color:var(--muted);text-transform:uppercase;margin-left:1px}
+.timer b{font-weight:400;color:rgba(53,224,122,.6)}
+
+/* Hero */
+.hero{overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(75% 40% at 50% 30%,var(--glow-soft),transparent 72%)}
+.hero-in{position:relative;max-width:1200px;margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center;padding-bottom:56px}
+.photo-box{position:relative;width:100%;max-width:520px}
+.hero-photo{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%;
+  -webkit-mask-image:linear-gradient(#0000,#000 10% 50%,#0000 96%),linear-gradient(90deg,#0000,#000 12% 88%,#0000);
+  -webkit-mask-composite:source-in;
+  mask-image:linear-gradient(#0000,#000 10% 50%,#0000 96%),linear-gradient(90deg,#0000,#000 12% 88%,#0000);
+  mask-composite:intersect}
+.photo-fallback{width:100%;aspect-ratio:4/5;display:none;align-items:center;justify-content:center;flex-direction:column;gap:8px;
+  background:radial-gradient(60% 50% at 50% 40%,#123d24,transparent 70%),var(--bg-2);color:var(--muted);font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.15em}
+.no-photo .hero-photo,.no-photo .inst-photo{display:none}
+.no-photo .photo-fallback{display:flex}
+.hero-txt{position:relative;z-index:2;margin-top:-128px}
+@media(min-width:640px){.hero-txt{margin-top:-160px}}
+.badge-top{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(53,224,122,.35);background:rgba(14,18,16,.8);backdrop-filter:blur(6px);border-radius:999px;padding:6px 14px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--green-light);margin-bottom:18px}
+h1{font-size:clamp(36px,9.6vw,66px);font-weight:600;line-height:1.06;letter-spacing:-.02em}
+h1 .g{font-weight:800}
+.sub{max-width:500px;margin:16px auto 0;font-size:17px;font-weight:500;line-height:1.375;color:rgba(240,246,241,.85)}
+@media(min-width:640px){.sub{font-size:19px}}
+.hero-price{margin-top:24px;display:inline-flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center}
+.hero-price .big{font-family:var(--display);font-size:56px;line-height:1;color:var(--green);text-shadow:0 0 30px var(--glow-soft)}
+.hero-price .big sup{font-size:22px;vertical-align:top;margin-right:4px;position:relative;top:6px}
+.hero-price .side{text-align:left;font-size:13px;color:var(--muted);line-height:1.35}
+.hero-price .side strong{color:var(--ink);font-size:15px}
+.hero-cta{margin-top:22px}
+.hero-cta p{margin-top:12px;font-size:12px;color:var(--muted)}
+.trust{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;margin-top:18px;font-size:12px;color:var(--muted)}
+.trust span{display:inline-flex;align-items:center;gap:6px}
+.trust svg{width:14px;height:14px;color:var(--green)}
+@media(min-width:1024px){
+  .hero:before{background:radial-gradient(40% 60% at 72% 50%,var(--glow-soft),transparent 72%)}
+  .hero-in{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:40px;padding:48px 32px;text-align:left;min-height:calc(100svh - 110px)}
+  .photo-box{order:2;justify-self:end;max-width:600px}
+  .hero-photo{aspect-ratio:3/4;object-position:58% 30%;border-radius:28px;-webkit-mask-image:linear-gradient(#000 80%,#0000 100%);mask-image:linear-gradient(#000 80%,#0000 100%)}
+  .photo-fallback{border-radius:28px}
+  .hero-txt{order:1;margin-top:0;padding:0}
+  h1{font-size:clamp(46px,4.4vw,64px)}
+  .sub{margin-left:0}
+  .hero-price,.trust{justify-content:flex-start}
+}
+
+/* Marquee */
+.marquee{overflow:hidden;border-block:1px solid var(--line-soft);background:var(--bg-2);padding:12px 0}
+.mtrack{display:flex;gap:48px;width:max-content;animation:marquee 28s linear infinite;font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.2em;color:var(--muted)}
+.mtrack span{white-space:nowrap}
+.mtrack span.hl{color:var(--green);font-weight:700}
+.mtrack span:before{content:"★ ";color:var(--green)}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* Problem / opportunity cards */
+.grid3{display:grid;gap:16px;margin-top:48px}
+@media(min-width:768px){.grid3{grid-template-columns:repeat(3,1fr)}}
+.card{border:1px solid var(--line);background:var(--card);border-radius:20px;padding:26px}
+.card .num{font-family:var(--display);font-size:40px;color:var(--green);line-height:1}
+.card h3{font-size:18px;margin-top:12px}
+.card p{color:var(--muted);font-size:15px;margin-top:8px}
+
+/* Tabs (curriculum) */
+.tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:40px}
+.tab{cursor:pointer;border:1px solid var(--line);background:var(--card);color:var(--muted);border-radius:999px;padding:10px 18px;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;transition:all .2s}
+.tab:hover{color:var(--ink);border-color:rgba(53,224,122,.4)}
+.tab[aria-selected="true"]{background:var(--green);color:var(--on-green);border-color:var(--green);font-weight:700}
+.panel{display:none;margin-top:28px}
+.panel.on{display:block;animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}}
+.panel-head{text-align:center;margin-bottom:24px}
+.panel-head h3{font-family:var(--display);text-transform:uppercase;font-weight:400;font-size:clamp(28px,4vw,40px)}
+.panel-head p{color:var(--muted);margin-top:6px}
+.mods{display:grid;gap:12px}
+@media(min-width:768px){.mods{grid-template-columns:1fr 1fr}}
+.mod{display:flex;gap:16px;align-items:flex-start;border:1px solid var(--line);background:var(--card);border-radius:16px;padding:20px}
+.mod .n{font-family:var(--mono);font-size:12px;color:var(--green);border:1px solid rgba(53,224,122,.35);border-radius:8px;padding:4px 8px;flex-shrink:0}
+.mod h4{font-size:16px}
+.mod p{color:var(--muted);font-size:14px;margin-top:4px}
+
+/* Offer */
+.offer{max-width:760px}
+.box{border:1px solid rgba(53,224,122,.4);background:var(--card);border-radius:24px;padding:22px;box-shadow:0 0 120px -40px var(--glow);margin-top:40px}
+@media(min-width:640px){.box{padding:34px}}
+.items{list-style:none;display:grid;gap:14px;font-size:15px}
+@media(min-width:640px){.items{font-size:16px}}
+.items li{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
+.items li > span:first-child{display:flex;gap:10px;align-items:flex-start;font-weight:600}
+.items svg{width:20px;height:20px;color:var(--green);flex-shrink:0;margin-top:2px}
+.items .inc{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--green);white-space:nowrap;margin-top:3px}
+.price-box{margin-top:26px;border-top:1px dashed var(--line);padding-top:26px;text-align:center}
+.pb-top{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;align-items:center}
+.chip{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;border-radius:999px;padding:5px 12px;border:1px solid var(--line);color:var(--muted)}
+.chip.on{background:var(--green);color:var(--on-green);border-color:var(--green);font-weight:700}
+.pb-label{margin-top:18px;font-size:14px;color:var(--muted)}
+.pb-big{font-family:var(--display);color:var(--green);line-height:.9;font-size:clamp(96px,22vw,150px);text-shadow:0 0 50px var(--glow-soft);margin-top:4px}
+.pb-big sup{font-size:.3em;vertical-align:top;position:relative;top:.35em;margin-right:6px}
+.pb-alt{font-size:17px;margin-top:8px}
+.pb-alt strong{color:var(--green)}
+.perday{display:inline-block;margin-top:16px;background:rgba(53,224,122,.08);border:1px solid rgba(53,224,122,.3);border-radius:12px;padding:10px 16px;font-size:14px}
+.perday b{color:var(--green)}
+.price-box .cta{margin-top:22px}
+.pb-foot{margin-top:12px;font-size:12px;color:var(--muted)}
+.compare{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:22px}
+.compare div{border:1px solid var(--line-soft);background:var(--bg-2);border-radius:12px;padding:12px 8px;font-size:12px;color:var(--muted);line-height:1.3}
+.compare div strong{display:block;font-size:15px;color:var(--ink);margin-bottom:2px}
+.compare div.win{border-color:rgba(53,224,122,.5);background:rgba(53,224,122,.07)}
+.compare div.win strong{color:var(--green)}
+
+/* For who */
+.two{display:grid;gap:16px;margin-top:44px}
+@media(min-width:768px){.two{grid-template-columns:1fr 1fr}}
+.list{list-style:none;display:grid;gap:12px;margin-top:14px}
+.list li{display:flex;gap:10px;font-size:15px;color:rgba(240,246,241,.9)}
+.list li:before{content:"✓";color:var(--green);font-weight:800}
+.list.no li:before{content:"✕";color:var(--red)}
+
+/* Instructor */
+.inst{display:grid;gap:32px;align-items:center}
+@media(min-width:900px){.inst{grid-template-columns:.9fr 1.1fr;gap:56px}}
+.poster{display:block;width:100%;height:auto;max-width:360px;margin:40px auto 0;border-radius:20px;border:1px solid rgba(53,224,122,.35);box-shadow:0 0 90px -20px var(--glow),0 30px 60px -30px #000;transform:rotate(-1.5deg)}
+.poster.reveal.in{transform:rotate(-1.5deg)}
+.poster + .box{margin-top:-30px}
+.inst-photo,.inst .photo-fallback{border-radius:24px;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%;width:100%;max-width:440px;margin:0 auto;
+  -webkit-mask-image:linear-gradient(#000 75%,#0000);mask-image:linear-gradient(#000 75%,#0000)}
+.inst h2{font-size:clamp(36px,5.6vw,64px)}
+.inst p{color:var(--muted);margin-top:14px;font-size:16px}
+.stats{display:flex;gap:28px;margin-top:26px;flex-wrap:wrap}
+.stats strong{display:block;font-family:var(--display);font-size:40px;color:var(--green);font-weight:400;line-height:1}
+.stats span{font-size:13px;color:var(--muted)}
+
+/* Guarantee */
+.guar{display:flex;flex-direction:column;align-items:center;gap:24px;text-align:center;border:1px solid var(--line);background:var(--card);border-radius:28px;padding:40px 24px;max-width:860px;margin:0 auto}
+@media(min-width:768px){.guar{flex-direction:row;text-align:left;padding:44px}}
+.seal{flex-shrink:0;width:150px;height:150px;border-radius:999px;border:2px dashed rgba(53,224,122,.6);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 0 60px -10px var(--glow)}
+.seal strong{font-family:var(--display);font-size:64px;line-height:.9;color:var(--green);font-weight:400}
+.seal span{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.guar h3{font-family:var(--display);text-transform:uppercase;font-weight:400;font-size:36px}
+.guar p{color:var(--muted);margin-top:8px}
+
+/* FAQ */
+.faq{max-width:760px;margin:40px auto 0;display:grid;gap:10px}
+details{border:1px solid var(--line);background:var(--card);border-radius:16px;padding:0 20px}
+summary{cursor:pointer;list-style:none;padding:18px 0;font-weight:600;display:flex;justify-content:space-between;gap:16px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";font-family:var(--mono);color:var(--green);font-size:20px;transition:transform .2s}
+details[open] summary:after{transform:rotate(45deg)}
+details p{color:var(--muted);padding-bottom:18px;font-size:15px}
+
+/* Final CTA */
+.final{text-align:center;overflow:hidden}
+.final:before{content:"";position:absolute;inset:0;background:radial-gradient(50% 60% at 50% 50%,var(--glow-soft),transparent 70%);pointer-events:none}
+.final .timer-big{display:flex;justify-content:center;gap:10px;margin-top:24px}
+.final .timer-big div{border:1px solid var(--line);background:var(--card);border-radius:14px;padding:12px 8px;min-width:68px}
+.final .timer-big strong{display:block;font-family:var(--display);font-weight:400;font-size:36px;color:var(--green);line-height:1;font-variant-numeric:tabular-nums}
+.final .timer-big span{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+footer{border-top:1px solid var(--line-soft);padding:40px 0 110px;color:var(--muted);font-size:12px;text-align:center}
+@media(min-width:768px){footer{padding-bottom:40px}}
+footer .logo{font-size:20px;color:var(--ink);margin-bottom:10px}
+footer p+p{margin-top:8px;max-width:640px;margin-inline:auto}
+
+/* Sticky mobile bar */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(5,5,5,.92);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 16px;display:flex;align-items:center;gap:12px;transform:translateY(110%);transition:transform .3s}
+.sticky.show{transform:none}
+.sticky .sp{line-height:1.15}
+.sticky .sp strong{font-family:var(--display);font-weight:400;color:var(--green);font-size:26px}
+.sticky .sp span{display:block;font-size:11px;color:var(--muted)}
+.sticky .cta{flex:1;padding:14px 12px;font-size:16px}
+@media(min-width:768px){.sticky{display:none}}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.mtrack,.cta:after,.dot{animation:none}}
+</style>
+</head>
+<body>
+
+<!-- ==================== TOPO / TAB ==================== -->
+<header>
+  <div class="wrap hdr">
+    <a href="#top" class="logo">Hacker <span class="g">Ético</span></a>
+    <p class="pill">
+      <span class="tag"><span class="dot"></span> Preço de lançamento</span>
+      <span style="display:flex;align-items:center;gap:8px;white-space:nowrap">
+        <span class="lbl">acaba em</span>
+        <span class="timer" aria-live="polite">
+          <span data-d>00</span><i>d</i><b>:</b>
+          <span data-h>00</span><i>h</i><b>:</b>
+          <span data-m>00</span><i>m</i><b>:</b>
+          <span data-s>00</span><i>s</i>
+        </span>
+      </span>
+    </p>
+  </div>
+</header>
+
+<main>
+<!-- ==================== HERO ==================== -->
+<section id="top" class="hero">
+  <div class="hero-in">
+    <div class="photo-box">
+      <!-- TROQUE "foto.jpg" PELA FOTO DO INSTRUTOR (vertical, 4:5) -->
+      <img class="hero-photo" src="foto.jpg" alt="Hacker ético de capuz diante de telas com código e um cadeado verde" width="900" height="690" fetchpriority="high" onerror="document.documentElement.classList.add('no-photo')">
+      <div class="photo-fallback">[ foto.jpg ]<span style="font-size:10px;opacity:.7">coloque a foto na pasta</span></div>
+    </div>
+    <div class="wrap hero-txt">
+      <span class="badge-top"><span class="dot"></span> Curso de cibersegurança · do zero</span>
+      <h1>Se torne um <span class="g">hacker ético</span> em 30 dias</h1>
+      <p class="sub">Fature ajudando as <strong class="g">empresas a se defenderem</strong> na era da IA.</p>
+
+      <div class="hero-price">
+        <span class="big"><sup>R$</sup>97</span>
+        <span class="side"><strong>Pagamento único</strong><br>ou 12x de R$ 10,03 no cartão</span>
+      </div>
+
+      <div class="hero-cta">
+        <a class="cta cta-full js-checkout" href="#" target="_blank" rel="noopener">Quero entrar por R$ 97</a>
+        <div class="trust">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/></svg>Compra segura</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>7 dias de garantia</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>Acesso imediato</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FAIXA ==================== -->
+<div class="marquee" aria-hidden="true">
+  <div class="mtrack">
+    <span class="hl">Só R$ 97</span><span>Hacker ético em 30 dias</span><span class="hl">12x de R$ 10,03</span><span>Do zero, sem saber programar</span><span class="hl">Só R$ 97</span><span>IA aplicada à segurança</span><span class="hl">7 dias de garantia</span><span>Acesso imediato</span>
+    <span class="hl">Só R$ 97</span><span>Hacker ético em 30 dias</span><span class="hl">12x de R$ 10,03</span><span>Do zero, sem saber programar</span><span class="hl">Só R$ 97</span><span>IA aplicada à segurança</span><span class="hl">7 dias de garantia</span><span>Acesso imediato</span>
+  </div>
+</div>
+
+<!-- ==================== OPORTUNIDADE ==================== -->
+<section class="sec">
+  <div class="wrap">
+    <div class="center reveal">
+      <p class="eyebrow">A oportunidade</p>
+      <h2 class="display">A IA deu armas <span class="g">aos atacantes.</span></h2>
+      <p class="lead">Golpes, invasões e vazamentos ficaram mais rápidos e baratos de fazer. Toda empresa agora precisa de alguém que saiba encontrar as falhas antes dos criminosos. Esse alguém pode ser você.</p>
+    </div>
+    <div class="grid3">
+      <div class="card reveal"><div class="num">01</div><h3>Demanda que só cresce</h3><p>Pequenas e médias empresas viraram alvo e quase nenhuma tem um especialista em segurança por perto.</p></div>
+      <div class="card reveal"><div class="num">02</div><h3>Serviço bem pago</h3><p>Teste de invasão, análise de vulnerabilidades e consultoria são serviços de alto valor que você pode oferecer como freelancer.</p></div>
+      <div class="card reveal"><div class="num">03</div><h3>Do zero em 30 dias</h3><p>Um passo a passo diário, com laboratório próprio, para sair do zero e chegar ao seu primeiro teste de invasão completo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CONTEÚDO (TABS) ==================== -->
+<section id="conteudo" class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="center reveal">
+      <p class="eyebrow">Por dentro</p>
+      <h2 class="display">O que você vai <span class="g">aprender</span></h2>
+      <p class="lead">Quatro semanas, uma etapa por vez. Tudo na prática, em ambiente de laboratório e dentro da lei.</p>
+    </div>
+
+    <div class="tabs reveal" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-tab="s1">Semana 1</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="s2">Semana 2</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="s3">Semana 3</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="s4">Semana 4</button>
+    </div>
+
+    <div class="panel on" id="s1" role="tabpanel">
+      <div class="panel-head"><h3>Fundamentos <span class="g">do hacker</span></h3><p>A base que separa o curioso do profissional.</p></div>
+      <div class="mods">
+        <div class="mod"><span class="n">01</span><div><h4>Mentalidade hacker e ética</h4><p>Como o atacante pensa e os limites legais do hacking ético.</p></div></div>
+        <div class="mod"><span class="n">02</span><div><h4>Linux e terminal</h4><p>Os comandos que você vai usar todo dia, sem decoreba.</p></div></div>
+        <div class="mod"><span class="n">03</span><div><h4>Redes na prática</h4><p>IP, portas, protocolos e como os dados circulam.</p></div></div>
+        <div class="mod"><span class="n">04</span><div><h4>Seu laboratório</h4><p>Monte um ambiente seguro para treinar sem riscos.</p></div></div>
+      </div>
+    </div>
+    <div class="panel" id="s2" role="tabpanel">
+      <div class="panel-head"><h3>Reconhecimento <span class="g">e varredura</span></h3><p>Descubra tudo sobre o alvo antes de agir.</p></div>
+      <div class="mods">
+        <div class="mod"><span class="n">05</span><div><h4>OSINT</h4><p>Informação pública que revela mais do que as empresas imaginam.</p></div></div>
+        <div class="mod"><span class="n">06</span><div><h4>Varredura de redes</h4><p>Mapeie hosts, portas e serviços expostos.</p></div></div>
+        <div class="mod"><span class="n">07</span><div><h4>Enumeração</h4><p>Extraia detalhes de cada serviço encontrado.</p></div></div>
+        <div class="mod"><span class="n">08</span><div><h4>Análise de vulnerabilidades</h4><p>Encontre e priorize as falhas que importam.</p></div></div>
+      </div>
+    </div>
+    <div class="panel" id="s3" role="tabpanel">
+      <div class="panel-head"><h3>Exploração <span class="g">na prática</span></h3><p>Onde a teoria vira resultado, sempre no laboratório.</p></div>
+      <div class="mods">
+        <div class="mod"><span class="n">09</span><div><h4>Falhas em aplicações web</h4><p>As vulnerabilidades mais comuns em sites e sistemas.</p></div></div>
+        <div class="mod"><span class="n">10</span><div><h4>Senhas e autenticação</h4><p>Por que logins caem e como proteger cada um.</p></div></div>
+        <div class="mod"><span class="n">11</span><div><h4>Escalada de privilégios</h4><p>Do acesso comum ao controle total, em ambiente controlado.</p></div></div>
+        <div class="mod"><span class="n">12</span><div><h4>Primeiro teste de invasão</h4><p>Um pentest completo, do início ao fim.</p></div></div>
+      </div>
+    </div>
+    <div class="panel" id="s4" role="tabpanel">
+      <div class="panel-head"><h3>IA e <span class="g">mercado</span></h3><p>Use IA a seu favor e transforme conhecimento em faturamento.</p></div>
+      <div class="mods">
+        <div class="mod"><span class="n">13</span><div><h4>IA para segurança</h4><p>Automatize reconhecimento, análise e relatórios com IA.</p></div></div>
+        <div class="mod"><span class="n">14</span><div><h4>Ataques com IA e defesa</h4><p>Phishing, deepfakes e golpes modernos, e como proteger empresas.</p></div></div>
+        <div class="mod"><span class="n">15</span><div><h4>Relatório profissional</h4><p>Entregue um relatório que o cliente entende e valoriza.</p></div></div>
+        <div class="mod"><span class="n">16</span><div><h4>Seus primeiros clientes</h4><p>Como precificar, oferecer e fechar seus primeiros serviços.</p></div></div>
+      </div>
+    </div>
+
+    <div class="center" style="margin-top:40px"><a class="cta cta-full js-checkout" href="#" target="_blank" rel="noopener">Quero aprender tudo isso por R$ 97</a></div>
+  </div>
+</section>
+
+<!-- ==================== OFERTA / PREÇO ==================== -->
+<section id="oferta" class="sec" style="background:var(--bg-2);border-block:1px solid var(--line-soft)">
+  <div class="wrap offer">
+    <div class="center reveal">
+      <p class="eyebrow">A oferta</p>
+      <h2 class="display">Tudo isso por <span class="g">menos que um jantar.</span></h2>
+      <p class="lead">Colocamos um preço que não deixa desculpa. Uma formação completa pelo valor de uma saída no fim de semana.</p>
+    </div>
+
+    <img class="poster reveal" src="capa-curso.jpg" alt="Curso online Hacker Ético do Zero: Linux, Pentest e Defesa" width="1122" height="1402" loading="lazy">
+
+    <div class="box reveal" style="position:relative">
+      <ul class="items">
+        <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>Curso Hacker Ético do Zero (16 módulos)</span><span class="inc">Incluso</span></li>
+        <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>Laboratório prático passo a passo</span><span class="inc">Incluso</span></li>
+        <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>Módulo de IA aplicada à segurança</span><span class="inc">Incluso</span></li>
+        <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>Como conseguir e cobrar seus primeiros clientes</span><span class="inc">Incluso</span></li>
+        <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>Garantia incondicional de 7 dias</span><span class="inc">Incluso</span></li>
+      </ul>
+
+      <div class="price-box">
+        <div class="pb-top"><span class="chip on">Preço de lançamento</span><span class="chip">Acesso imediato</span></div>
+        <p class="pb-label">Você paga uma única vez</p>
+        <div class="pb-big"><sup>R$</sup>97</div>
+        <p class="pb-alt">ou <strong>12x de R$ 10,03</strong> no cartão</p>
+        <p class="perday">Dá <b>R$ 3,23 por dia</b> durante os 30 dias de curso</p>
+
+        <div class="compare">
+          <div><strong>R$ 120+</strong>um jantar fora</div>
+          <div><strong>R$ 250+</strong>um tanque de gasolina</div>
+          <div class="win"><strong>R$ 97</strong>uma nova profissão</div>
+        </div>
+
+        <a class="cta cta-full js-checkout" href="#" target="_blank" rel="noopener">Garantir minha vaga por R$ 97</a>
+        <p class="pb-foot">Pagamento seguro via Kiwify · Pix, boleto ou cartão · 7 dias de garantia</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PARA QUEM ==================== -->
+<section class="sec">
+  <div class="wrap">
+    <div class="center reveal">
+      <p class="eyebrow">Para quem é</p>
+      <h2 class="display">Esse curso <span class="g">é pra você</span> se...</h2>
+    </div>
+    <div class="two">
+      <div class="card reveal">
+        <h3 class="g">É pra você</h3>
+        <ul class="list">
+          <li>Quer entrar na área de tecnologia por uma porta com alta demanda</li>
+          <li>Nunca estudou segurança e quer começar do zero absoluto</li>
+          <li>Quer uma renda extra prestando serviços para empresas</li>
+          <li>Já é de TI e quer se especializar em cibersegurança</li>
+          <li>Quer entender como a IA mudou os ataques e as defesas</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <h3 style="color:var(--red)">Não é pra você</h3>
+        <ul class="list no">
+          <li>Quer invadir sistemas de terceiros sem autorização</li>
+          <li>Procura fórmula mágica sem colocar a mão na massa</li>
+          <li>Não tem 1 hora por dia para praticar durante 30 dias</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== INSTRUTOR ==================== -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap inst">
+    <div class="reveal">
+      <img class="inst-photo" src="foto.jpg" alt="Instrutor" loading="lazy">
+      <div class="photo-fallback">[ foto.jpg ]</div>
+    </div>
+    <div class="reveal">
+      <p class="eyebrow">Quem te ensina</p>
+      <!-- EDITE: nome e bio do instrutor -->
+      <h2 class="display">Prazer, eu sou <span class="g">[Nome do Instrutor].</span></h2>
+      <p>[Escreva aqui 2 ou 3 frases sobre a trajetória do instrutor: há quanto tempo trabalha com segurança, empresas que já ajudou, certificações e por que criou o curso.]</p>
+      <p>Meu objetivo é simples: te dar o caminho mais curto entre o zero e o seu primeiro cliente em cibersegurança.</p>
+      <div class="stats">
+        <div><strong>+000</strong><span>alunos</span></div>
+        <div><strong>+00</strong><span>empresas atendidas</span></div>
+        <div><strong>00 anos</strong><span>de experiência</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== GARANTIA ==================== -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="guar reveal">
+      <div class="seal"><strong>7</strong><span>dias</span></div>
+      <div>
+        <h3>Risco <span class="g">zero</span></h3>
+        <p>Entre, assista às aulas e coloque em prática. Se em até 7 dias você achar que não é pra você, devolvemos 100% do valor. Sem perguntas e sem burocracia, direto pela Kiwify.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FAQ ==================== -->
+<section id="faq" class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="center reveal">
+      <p class="eyebrow">Dúvidas</p>
+      <h2 class="display">Antes de você <span class="g">perguntar</span></h2>
+    </div>
+    <div class="faq">
+      <details open><summary>Preciso saber programar?</summary><p>Não. O curso começa do zero absoluto, do terminal às redes. Você aprende o que precisa no momento em que precisa.</p></details>
+      <details><summary>Hacking ético é legal?</summary><p>Sim. Hacker ético testa sistemas com autorização para encontrar falhas e corrigi-las. No curso tudo é feito em laboratório próprio, e você aprende os limites legais desde a primeira aula.</p></details>
+      <details><summary>Quanto custa?</summary><p>R$ 97 à vista ou 12x de R$ 10,03 no cartão. Pagamento único, sem mensalidade.</p></details>
+      <details><summary>Qual computador eu preciso?</summary><p>Um computador comum com Windows, Mac ou Linux e acesso à internet já resolve. No curso você aprende a montar o laboratório.</p></details>
+      <details><summary>Quanto tempo por dia vou precisar?</summary><p>Cerca de 1 hora por dia durante 30 dias. Se precisar de mais tempo, tudo bem: você segue no seu ritmo.</p></details>
+      <details><summary>Como recebo o acesso?</summary><p>Logo após a confirmação do pagamento você recebe o acesso por e-mail. No Pix e no cartão é na hora.</p></details>
+      <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia. Peça o reembolso pela Kiwify e recebe 100% do valor de volta.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CTA FINAL ==================== -->
+<section class="sec final">
+  <div class="wrap" style="position:relative">
+    <p class="eyebrow">Preço de lançamento acaba em</p>
+    <div class="timer-big">
+      <div><strong data-d>00</strong><span>dias</span></div>
+      <div><strong data-h>00</strong><span>horas</span></div>
+      <div><strong data-m>00</strong><span>min</span></div>
+      <div><strong data-s>00</strong><span>seg</span></div>
+    </div>
+    <h2 class="display" style="margin-top:32px">Daqui a 30 dias você pode ser <span class="g">um hacker ético.</span></h2>
+    <p class="lead">Ou pode continuar no mesmo lugar. A diferença custa R$ 97.</p>
+    <div style="margin-top:28px"><a class="cta cta-full js-checkout" href="#" target="_blank" rel="noopener">Quero começar agora por R$ 97</a></div>
+    <p class="pb-foot" style="margin-top:12px">ou 12x de R$ 10,03 · 7 dias de garantia</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="logo">Hacker <span class="g">Ético</span></div>
+    <p>© <span id="yr">2026</span> · Todos os direitos reservados</p>
+    <p>Este site não é afiliado ao Facebook, Instagram, Google ou qualquer outra plataforma. Os resultados variam de acordo com a dedicação de cada aluno. Todo o conteúdo é voltado para segurança defensiva e testes autorizados.</p>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky">
+  <div class="sp"><strong>R$ 97</strong><span>ou 12x R$ 10,03</span></div>
+  <a class="cta js-checkout" href="#" target="_blank" rel="noopener">Quero entrar</a>
+</div>
+
+<script>
+/* ====== CONFIGURAÇÃO ====== */
+// Link de checkout (Kiwify). Os parâmetros UTM de quem chegou na página são repassados automaticamente.
+var CHECKOUT = "https://pay.kiwify.com.br/Bk2RQhP?utm_source=ig&utm_medium=social&utm_content=link_in_bio&utm_id=97760_v0_s00_e0_tv3";
+// Data em que o preço de lançamento termina (horário de Brasília)
+var FIM_OFERTA = "2026-11-30T23:59:59-03:00";
+
+/* Links de checkout com repasse de UTMs */
+(function(){
+  var url;
+  try{
+    url = new URL(CHECKOUT);
+    new URLSearchParams(location.search).forEach(function(v,k){ if(/^(utm_|src|sck|fbclid|gclid)/.test(k)) url.searchParams.set(k,v); });
+    url = url.toString();
+  }catch(e){ url = CHECKOUT; }
+  document.querySelectorAll('.js-checkout').forEach(function(a){ a.href = url; });
+})();
+
+/* Contador */
+(function(){
+  var end = new Date(FIM_OFERTA).getTime();
+  function pad(n){ return String(n).padStart(2,'0'); }
+  function tick(){
+    var t = Math.max(0, end - Date.now());
+    var d = Math.floor(t/864e5), h = Math.floor(t/36e5)%24, m = Math.floor(t/6e4)%60, s = Math.floor(t/1e3)%60;
+    [['d',d],['h',h],['m',m],['s',s]].forEach(function(p){
+      document.querySelectorAll('[data-'+p[0]+']').forEach(function(el){ el.textContent = pad(p[1]); });
+    });
+  }
+  tick(); setInterval(tick,1000);
+})();
+
+/* Tabs */
+document.querySelectorAll('.tab').forEach(function(b){
+  b.addEventListener('click', function(){
+    document.querySelectorAll('.tab').forEach(function(x){ x.setAttribute('aria-selected','false'); });
+    document.querySelectorAll('.panel').forEach(function(p){ p.classList.remove('on'); });
+    b.setAttribute('aria-selected','true');
+    document.getElementById(b.dataset.tab).classList.add('on');
+  });
+});
+
+/* Animação de entrada */
+(function(){
+  var els = document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){ els.forEach(function(e){ e.classList.add('in'); }); return; }
+  var io = new IntersectionObserver(function(en){ en.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); },{threshold:.12});
+  els.forEach(function(e){ io.observe(e); });
+})();
+
+/* Barra fixa no mobile */
+(function(){
+  var s = document.getElementById('sticky'), hero = document.getElementById('top');
+  window.addEventListener('scroll', function(){ s.classList.toggle('show', window.scrollY > hero.offsetHeight * .8); }, {passive:true});
+})();
+
+document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
