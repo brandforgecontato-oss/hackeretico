@@ -208,6 +208,9 @@ h1 .g{font-weight:800}
 .inst h2{font-size:clamp(36px,5.6vw,64px)}
 .inst p{color:var(--muted);margin-top:14px;font-size:16px}
 .inst p.eyebrow{color:var(--green);font-size:11px;margin-top:0}
+.creds{list-style:none;display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.creds li{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(53,224,122,.35);background:rgba(53,224,122,.07);border-radius:999px;padding:8px 14px;font-size:13px;font-weight:600}
+.creds svg{width:16px;height:16px;color:var(--green);flex-shrink:0}
 
 /* Guarantee */
 .guar{display:flex;flex-direction:column;align-items:center;gap:24px;text-align:center;border:1px solid var(--line);background:var(--card);border-radius:28px;padding:40px 24px;max-width:860px;margin:0 auto}
@@ -483,10 +486,14 @@ footer p+p{margin-top:8px;max-width:640px;margin-inline:auto}
     </div>
     <div class="reveal">
       <p class="eyebrow">Quem te ensina</p>
-      <!-- EDITE: nome e bio do instrutor -->
-      <h2 class="display">Prazer, eu sou <span class="g">[Nome do Instrutor].</span></h2>
-      <p>[Escreva aqui 2 ou 3 frases sobre a trajetória do instrutor: há quanto tempo trabalha com segurança, empresas que já ajudou, certificações e por que criou o curso.]</p>
-      <p>Eu sei como um ataque acontece por dentro. É exatamente por isso que posso te ensinar a impedir que ele aconteça. Meu objetivo é te dar o caminho mais curto entre o zero e o seu primeiro cliente em cibersegurança.</p>
+      <h2 class="display">Prazer, eu sou o <span class="g">Silvestre.</span></h2>
+      <p>Estudante de Inteligência Artificial, CEO da BrandForge e certificado em Cibersegurança pela Cisco. Protejo as aplicações de todos os clientes da empresa e criei este curso para ensinar segurança do zero, do jeito que eu gostaria de ter aprendido.</p>
+      <p>Eu sei como um ataque acontece por dentro. É exatamente por isso que posso te ensinar a impedir que ele aconteça.</p>
+      <ul class="creds">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg>Certificado em Cibersegurança pela Cisco</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg>CEO da BrandForge</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="14" height="14" rx="2"/><path d="M9 9h6v6H9zM9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></svg>Estudante de Inteligência Artificial</li>
+      </ul>
     </div>
   </div>
 </section>
