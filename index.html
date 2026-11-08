@@ -7,7 +7,7 @@
 <meta name="description" content="Se torne um hacker ético em 30 dias e fature ajudando as empresas a se defenderem na era da IA. Por apenas R$ 97 ou 12x.">
 <meta property="og:title" content="Se torne um Hacker Ético em 30 dias">
 <meta property="og:description" content="Fature ajudando as empresas a se defenderem na era da IA. Apenas R$ 97.">
-<meta property="og:image" content="capa-curso.jpg">
+<meta property="og:image" content="imagem/capa-curso.jpg">
 <meta name="theme-color" content="#050505">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -74,17 +74,17 @@ header{border-bottom:1px solid var(--line-soft);background:var(--bg)}
 .hero:before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(75% 40% at 50% 30%,var(--glow-soft),transparent 72%)}
 .hero-in{position:relative;max-width:1200px;margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center;padding-bottom:56px}
 .photo-box{position:relative;width:100%;max-width:520px}
-.hero-photo{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%;
+.hero-photo{width:100%;height:auto;aspect-ratio:900/734;object-fit:cover;object-position:50% 30%;
   -webkit-mask-image:linear-gradient(#0000,#000 10% 50%,#0000 96%),linear-gradient(90deg,#0000,#000 12% 88%,#0000);
   -webkit-mask-composite:source-in;
   mask-image:linear-gradient(#0000,#000 10% 50%,#0000 96%),linear-gradient(90deg,#0000,#000 12% 88%,#0000);
   mask-composite:intersect}
-.photo-fallback{width:100%;aspect-ratio:4/5;display:none;align-items:center;justify-content:center;flex-direction:column;gap:8px;
+.photo-fallback{width:100%;aspect-ratio:900/734;display:none;align-items:center;justify-content:center;flex-direction:column;gap:8px;
   background:radial-gradient(60% 50% at 50% 40%,#123d24,transparent 70%),var(--bg-2);color:var(--muted);font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.15em}
 .no-photo .hero-photo,.no-photo .inst-photo{display:none}
 .no-photo .photo-fallback{display:flex}
-.hero-txt{position:relative;z-index:2;margin-top:-128px}
-@media(min-width:640px){.hero-txt{margin-top:-160px}}
+.hero-txt{position:relative;z-index:2;margin-top:-36px}
+@media(min-width:640px){.hero-txt{margin-top:-56px}}
 .badge-top{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(53,224,122,.35);background:rgba(14,18,16,.8);backdrop-filter:blur(6px);border-radius:999px;padding:6px 14px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--green-light);margin-bottom:18px}
 h1{font-size:clamp(36px,9.6vw,66px);font-weight:600;line-height:1.06;letter-spacing:-.02em}
 h1 .g{font-weight:800}
@@ -104,8 +104,8 @@ h1 .g{font-weight:800}
   .hero:before{background:radial-gradient(40% 60% at 72% 50%,var(--glow-soft),transparent 72%)}
   .hero-in{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:40px;padding:48px 32px;text-align:left;min-height:calc(100svh - 110px)}
   .photo-box{order:2;justify-self:end;max-width:600px}
-  .hero-photo{aspect-ratio:3/4;object-position:58% 30%;border-radius:28px;-webkit-mask-image:linear-gradient(#000 80%,#0000 100%);mask-image:linear-gradient(#000 80%,#0000 100%)}
-  .photo-fallback{border-radius:28px}
+  .hero-photo{aspect-ratio:4/5;object-position:50% 50%;border-radius:28px;-webkit-mask-image:linear-gradient(#000 85%,#0000 100%);mask-image:linear-gradient(#000 85%,#0000 100%)}
+  .photo-fallback{border-radius:28px;aspect-ratio:4/5}
   .hero-txt{order:1;margin-top:0;padding:0}
   h1{font-size:clamp(46px,4.4vw,64px)}
   .sub{margin-left:0}
@@ -194,9 +194,15 @@ h1 .g{font-weight:800}
 /* Instructor */
 .inst{display:grid;gap:32px;align-items:center}
 @media(min-width:900px){.inst{grid-template-columns:.9fr 1.1fr;gap:56px}}
-.poster{display:block;width:100%;height:auto;max-width:360px;margin:40px auto 0;border-radius:20px;border:1px solid rgba(53,224,122,.35);box-shadow:0 0 90px -20px var(--glow),0 30px 60px -30px #000;transform:rotate(-1.5deg)}
-.poster.reveal.in{transform:rotate(-1.5deg)}
-.poster + .box{margin-top:-30px}
+.product-shot{display:block;margin:40px auto 0}
+.poster{display:block;width:100%;height:auto;max-width:360px;margin:0 auto;border-radius:20px;border:1px solid rgba(53,224,122,.35);box-shadow:0 0 90px -20px var(--glow),0 30px 60px -30px #000;transform:rotate(-1.5deg);transition:transform .3s}
+.product-shot + .box{margin-top:-30px}
+@media(min-width:768px){
+  .product-shot{width:min(1040px,calc(100vw - 64px));margin-left:calc(50% - min(520px,50vw - 32px))}
+  .poster{max-width:none;border-radius:24px;transform:none}
+  .product-shot:hover .poster{transform:translateY(-3px)}
+  .product-shot + .box{margin-top:36px}
+}
 .inst-photo,.inst .photo-fallback{border-radius:24px;aspect-ratio:900/680;height:auto;object-fit:cover;object-position:50% 30%;width:100%;max-width:560px;margin:0 auto;
   -webkit-mask-image:linear-gradient(#000 75%,#0000);mask-image:linear-gradient(#000 75%,#0000)}
 .inst h2{font-size:clamp(36px,5.6vw,64px)}
@@ -274,9 +280,12 @@ footer p+p{margin-top:8px;max-width:640px;margin-inline:auto}
 <section id="top" class="hero">
   <div class="hero-in">
     <div class="photo-box">
-      <!-- TROQUE "foto.jpg" PELA FOTO DO INSTRUTOR (vertical, 4:5) -->
-      <img class="hero-photo" src="foto.jpg" alt="Hacker ético de capuz diante de telas com código e um cadeado verde" width="900" height="690" fetchpriority="high" onerror="document.documentElement.classList.add('no-photo')">
-      <div class="photo-fallback">[ foto.jpg ]<span style="font-size:10px;opacity:.7">coloque a foto na pasta</span></div>
+      <!-- Desktop: arte inteira (imagem/hero.jpg) · Celular: recorte sem o texto (imagem/hero-mobile.jpg) -->
+      <picture>
+        <source media="(min-width:1024px)" srcset="imagem/hero.jpg" width="960" height="1200">
+        <img class="hero-photo" src="imagem/hero-mobile.jpg" alt="Hacker ético de capuz diante de código verde e um cadeado aberto" width="900" height="734" fetchpriority="high" onerror="document.documentElement.classList.add('no-photo')">
+      </picture>
+      <div class="photo-fallback">[ imagem/hero.jpg ]</div>
     </div>
     <div class="wrap hero-txt">
       <span class="badge-top"><span class="dot"></span> Curso de cibersegurança · do zero</span>
@@ -399,7 +408,12 @@ footer p+p{margin-top:8px;max-width:640px;margin-inline:auto}
       <p class="lead">Colocamos um preço que não deixa desculpa. Uma formação completa pelo valor de uma saída no fim de semana.</p>
     </div>
 
-    <img class="poster reveal" src="capa-curso.jpg" alt="Curso online Hacker Ético do Zero: Linux, Pentest e Defesa" width="1122" height="1402" loading="lazy">
+    <a class="product-shot reveal js-checkout" href="#" target="_blank" rel="noopener" aria-label="Garantir acesso ao curso Hacker Ético do Zero">
+      <picture>
+        <source media="(min-width:768px)" srcset="imagem/banner-curso.jpg" width="1600" height="900">
+        <img class="poster" src="imagem/capa-curso.jpg" alt="Curso online Hacker Ético do Zero" width="800" height="1000" loading="lazy">
+      </picture>
+    </a>
 
     <div class="box reveal" style="position:relative">
       <ul class="items">
@@ -464,8 +478,8 @@ footer p+p{margin-top:8px;max-width:640px;margin-inline:auto}
 <section id="instrutor" class="sec" style="padding-top:0">
   <div class="wrap inst">
     <div class="reveal">
-      <img class="inst-photo" src="foto-2.jpg" alt="Instrutor do curso Hacker Ético do Zero" width="900" height="680" loading="lazy">
-      <div class="photo-fallback">[ foto.jpg ]</div>
+      <img class="inst-photo" src="imagem/foto-2.jpg" alt="Instrutor do curso Hacker Ético do Zero" width="900" height="680" loading="lazy">
+      <div class="photo-fallback">[ imagem/foto-2.jpg ]</div>
     </div>
     <div class="reveal">
       <p class="eyebrow">Quem te ensina</p>
