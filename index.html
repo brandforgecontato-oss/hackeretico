@@ -146,6 +146,14 @@ h1 .g{font-weight:800}
 .mod h4{font-size:16px}
 .mod p{color:var(--muted);font-size:14px;margin-top:4px}
 
+/* Aviso ético */
+.notice{display:flex;gap:18px;align-items:flex-start;max-width:860px;margin:48px auto 0;border:1px solid rgba(53,224,122,.45);background:linear-gradient(135deg,rgba(53,224,122,.10),rgba(14,18,16,.9) 60%);border-radius:20px;padding:24px;text-align:left;box-shadow:0 0 80px -40px var(--glow)}
+.notice svg{width:44px;height:44px;flex-shrink:0;color:var(--green)}
+.notice h3{font-family:var(--display);text-transform:uppercase;font-weight:400;font-size:26px;line-height:1.05}
+.notice p{color:rgba(240,246,241,.85);margin-top:8px;font-size:15px}
+.notice p strong{color:var(--ink)}
+@media(max-width:520px){.notice{flex-direction:column;gap:12px}}
+
 /* Offer */
 .offer{max-width:760px}
 .box{border:1px solid rgba(53,224,122,.4);background:var(--card);border-radius:24px;padding:22px;box-shadow:0 0 120px -40px var(--glow);margin-top:40px}
@@ -372,6 +380,15 @@ footer p+p{margin-top:8px;max-width:640px;margin-inline:auto}
       </div>
     </div>
 
+    <div class="notice reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+      <div>
+        <h3>Aqui você aprende a <span class="g">se proteger</span></h3>
+        <p>Neste curso você aprende a se proteger e a proteger empresas de ataques hacker. Você entende como os ataques funcionam para saber como bloqueá-los, sempre praticando no seu próprio laboratório.</p>
+        <p><strong>Não ensinamos a invadir sistemas sem autorização.</strong> Invadir sistemas de terceiros sem permissão é crime, e esse não é o nosso trabalho.</p>
+      </div>
+    </div>
+
     <div class="center" style="margin-top:40px"><a class="cta cta-full js-checkout" href="#" target="_blank" rel="noopener">Quero aprender tudo isso por R$ 97</a></div>
   </div>
 </section>
@@ -488,7 +505,8 @@ footer p+p{margin-top:8px;max-width:640px;margin-inline:auto}
     </div>
     <div class="faq">
       <details open><summary>Preciso saber programar?</summary><p>Não. O curso começa do zero absoluto, do terminal às redes. Você aprende o que precisa no momento em que precisa.</p></details>
-      <details><summary>Hacking ético é legal?</summary><p>Sim. Hacker ético testa sistemas com autorização para encontrar falhas e corrigi-las. No curso tudo é feito em laboratório próprio, e você aprende os limites legais desde a primeira aula.</p></details>
+      <details><summary>Hacking ético é legal?</summary><p>Sim. O hacker ético trabalha para proteger: encontra falhas com autorização e ajuda a corrigi-las. No curso tudo é feito em laboratório próprio, e você aprende os limites legais desde a primeira aula.</p></details>
+      <details><summary>O curso ensina a invadir sistemas?</summary><p>Não. O curso ensina a se proteger e a proteger empresas de ataques hacker. Não ensinamos a invadir sistemas sem autorização, o que é crime.</p></details>
       <details><summary>Quanto custa?</summary><p>R$ 97 à vista ou 12x de R$ 10,03 no cartão. Pagamento único, sem mensalidade.</p></details>
       <details><summary>Qual computador eu preciso?</summary><p>Um computador comum com Windows, Mac ou Linux e acesso à internet já resolve. No curso você aprende a montar o laboratório.</p></details>
       <details><summary>Quanto tempo por dia vou precisar?</summary><p>Cerca de 1 hora por dia durante 30 dias. Se precisar de mais tempo, tudo bem: você segue no seu ritmo.</p></details>
@@ -520,7 +538,7 @@ footer p+p{margin-top:8px;max-width:640px;margin-inline:auto}
   <div class="wrap">
     <div class="logo">Hacker <span class="g">Ético</span></div>
     <p>© <span id="yr">2026</span> · Todos os direitos reservados</p>
-    <p>Este site não é afiliado ao Facebook, Instagram, Google ou qualquer outra plataforma. Os resultados variam de acordo com a dedicação de cada aluno. Todo o conteúdo é voltado para segurança defensiva e testes autorizados.</p>
+    <p>Este site não é afiliado ao Facebook, Instagram, Google ou qualquer outra plataforma. Os resultados variam de acordo com a dedicação de cada aluno. Este curso ensina apenas a se proteger de ataques hacker. Não ensinamos a invadir sistemas sem autorização.</p>
   </div>
 </footer>
 
