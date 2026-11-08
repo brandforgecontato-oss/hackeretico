@@ -42,7 +42,7 @@ section{position:relative}
 .sec{padding:80px 0}
 @media(min-width:640px){.sec{padding:112px 0}}
 .center{text-align:center}
-h2.display{font-size:clamp(40px,7vw,80px);margin-top:12px}
+h2.display{font-size:clamp(40px,7vw,80px);margin-top:20px}
 .lead{max-width:580px;margin:16px auto 0;font-size:17px;color:var(--muted)}
 
 /* CTA */
@@ -189,10 +189,11 @@ h1 .g{font-weight:800}
 .poster{display:block;width:100%;height:auto;max-width:360px;margin:40px auto 0;border-radius:20px;border:1px solid rgba(53,224,122,.35);box-shadow:0 0 90px -20px var(--glow),0 30px 60px -30px #000;transform:rotate(-1.5deg)}
 .poster.reveal.in{transform:rotate(-1.5deg)}
 .poster + .box{margin-top:-30px}
-.inst-photo,.inst .photo-fallback{border-radius:24px;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%;width:100%;max-width:440px;margin:0 auto;
+.inst-photo,.inst .photo-fallback{border-radius:24px;aspect-ratio:900/680;height:auto;object-fit:cover;object-position:50% 30%;width:100%;max-width:560px;margin:0 auto;
   -webkit-mask-image:linear-gradient(#000 75%,#0000);mask-image:linear-gradient(#000 75%,#0000)}
 .inst h2{font-size:clamp(36px,5.6vw,64px)}
 .inst p{color:var(--muted);margin-top:14px;font-size:16px}
+.inst p.eyebrow{color:var(--green);font-size:11px;margin-top:0}
 .stats{display:flex;gap:28px;margin-top:26px;flex-wrap:wrap}
 .stats strong{display:block;font-family:var(--display);font-size:40px;color:var(--green);font-weight:400;line-height:1}
 .stats span{font-size:13px;color:var(--muted)}
@@ -446,10 +447,10 @@ footer p+p{margin-top:8px;max-width:640px;margin-inline:auto}
 </section>
 
 <!-- ==================== INSTRUTOR ==================== -->
-<section class="sec" style="padding-top:0">
+<section id="instrutor" class="sec" style="padding-top:0">
   <div class="wrap inst">
     <div class="reveal">
-      <img class="inst-photo" src="foto.jpg" alt="Instrutor" loading="lazy">
+      <img class="inst-photo" src="foto-2.jpg" alt="Instrutor do curso Hacker Ético do Zero" width="900" height="680" loading="lazy">
       <div class="photo-fallback">[ foto.jpg ]</div>
     </div>
     <div class="reveal">
