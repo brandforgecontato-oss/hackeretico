@@ -145,6 +145,8 @@ h1 .g{font-weight:800}
 .mod .n{font-family:var(--mono);font-size:12px;color:var(--green);border:1px solid rgba(53,224,122,.35);border-radius:8px;padding:4px 8px;flex-shrink:0}
 .mod h4{font-size:16px}
 .mod p{color:var(--muted);font-size:14px;margin-top:4px}
+.mods.soon .mod{border-style:dashed;background:transparent}
+.mods.soon .mod .n{color:var(--muted);border-color:var(--line)}
 
 /* Aviso ético */
 .notice{display:flex;gap:18px;align-items:flex-start;max-width:860px;margin:48px auto 0;border:1px solid rgba(53,224,122,.45);background:linear-gradient(135deg,rgba(53,224,122,.10),rgba(14,18,16,.9) 60%);border-radius:20px;padding:24px;text-align:left;box-shadow:0 0 80px -40px var(--glow)}
@@ -315,8 +317,8 @@ footer p+p{margin-top:8px;max-width:640px;margin-inline:auto}
 <!-- ==================== FAIXA ==================== -->
 <div class="marquee" aria-hidden="true">
   <div class="mtrack">
-    <span class="hl">Só R$ 97</span><span>Hacker ético em 30 dias</span><span class="hl">12x de R$ 10,03</span><span>Do zero, sem saber programar</span><span class="hl">Só R$ 97</span><span>IA aplicada à segurança</span><span class="hl">7 dias de garantia</span><span>Certificado de conclusão</span>
-    <span class="hl">Só R$ 97</span><span>Hacker ético em 30 dias</span><span class="hl">12x de R$ 10,03</span><span>Do zero, sem saber programar</span><span class="hl">Só R$ 97</span><span>IA aplicada à segurança</span><span class="hl">7 dias de garantia</span><span>Certificado de conclusão</span>
+    <span class="hl">Só R$ 97</span><span>Hacker ético em 30 dias</span><span class="hl">12x de R$ 10,03</span><span>Do zero, sem saber programar</span><span class="hl">Só R$ 97</span><span>Laboratório Kali Linux</span><span class="hl">7 dias de garantia</span><span>Certificado de conclusão</span>
+    <span class="hl">Só R$ 97</span><span>Hacker ético em 30 dias</span><span class="hl">12x de R$ 10,03</span><span>Do zero, sem saber programar</span><span class="hl">Só R$ 97</span><span>Laboratório Kali Linux</span><span class="hl">7 dias de garantia</span><span>Certificado de conclusão</span>
   </div>
 </div>
 
@@ -330,8 +332,8 @@ footer p+p{margin-top:8px;max-width:640px;margin-inline:auto}
     </div>
     <div class="grid3">
       <div class="card reveal"><div class="num">01</div><h3>Demanda que só cresce</h3><p>Pequenas e médias empresas viraram alvo e quase nenhuma tem um especialista em segurança por perto.</p></div>
-      <div class="card reveal"><div class="num">02</div><h3>Serviço bem pago</h3><p>Análise de segurança e orientação de proteção são serviços valorizados que você pode oferecer como freelancer para pequenos negócios.</p></div>
-      <div class="card reveal"><div class="num">03</div><h3>Do zero em 30 dias</h3><p>8 aulas curtas, 2 por semana, em linguagem simples, para sair do zero e entender como proteger pessoas e empresas.</p></div>
+      <div class="card reveal"><div class="num">02</div><h3>Serviço bem pago</h3><p>Testes de segurança autorizados, análise de vulnerabilidades e consultoria de proteção são serviços de alto valor que você pode oferecer como freelancer.</p></div>
+      <div class="card reveal"><div class="num">03</div><h3>Do zero em 30 dias</h3><p>31 aulas curtas e diretas para sair do zero e executar a primeira fase de um pentest real, no seu laboratório e dentro da lei.</p></div>
     </div>
   </div>
 </section>
@@ -342,42 +344,83 @@ footer p+p{margin-top:8px;max-width:640px;margin-inline:auto}
     <div class="center reveal">
       <p class="eyebrow">Por dentro</p>
       <h2 class="display">O que você vai <span class="g">aprender</span></h2>
-      <p class="lead">Quem só conhece a defesa está sempre um passo atrás. Aqui você entende como os ataques funcionam para saber como se proteger e proteger quem está perto de você. São 8 aulas curtas, de 15 a 20 minutos, 2 por semana, em linguagem simples e dentro da lei.</p>
+      <p class="lead">Quem só conhece a defesa está sempre um passo atrás. Aqui você aprende como os ataques funcionam para saber exatamente como proteger cada sistema. São 31 aulas curtas, de 3 a 6 minutos, em 5 módulos: da ética e das 5 fases do pentest até o seu primeiro reconhecimento com Nmap, sempre em laboratório próprio e dentro da lei.</p>
     </div>
 
     <div class="tabs reveal" role="tablist">
-      <button class="tab" role="tab" aria-selected="true" data-tab="s1">Semana 1</button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="s2">Semana 2</button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="s3">Semana 3</button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="s4">Semana 4</button>
+      <button class="tab" role="tab" aria-selected="true" data-tab="m1">Módulo 1</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="m2">Módulo 2</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="m3">Módulo 3</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="m4">Módulo 4</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="m5">Módulo 5</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="mx">Em breve</button>
     </div>
 
-    <div class="panel on" id="s1" role="tabpanel">
-      <div class="panel-head"><h3>Ética e <span class="g">fundamentos</span></h3><p>Antes da técnica, o que separa o profissional do criminoso.</p></div>
+    <div class="panel on" id="m1" role="tabpanel">
+      <div class="panel-head"><h3>Introdução <span class="g">ao hacking</span></h3><p>O que é pentest, quem participa e como ele é feito.</p></div>
       <div class="mods">
-        <div class="mod"><span class="n">01</span><div><h4>Ética hacker</h4><p>A diferença entre hacker ético e criminoso, o que a lei diz e as 5 regras do profissional.</p></div></div>
-        <div class="mod"><span class="n">02</span><div><h4>Por que a cibersegurança importa</h4><p>Casos reais de dados vazados, contas roubadas e empresas paradas por um ataque.</p></div></div>
+        <div class="mod"><span class="n">01</span><div><h4>O que é pentest e os times red, blue e purple</h4><p>O teste de segurança autorizado e quem faz o quê na proteção de uma empresa.</p></div></div>
+        <div class="mod"><span class="n">02</span><div><h4>Tipos de teste e as 5 fases do pentest</h4><p>Caixa preta, cinza e branca, e o passo a passo de todo pentest profissional.</p></div></div>
+        <div class="mod"><span class="n">03</span><div><h4>OWASP Top 10, ferramentas, ética e carreira</h4><p>Os riscos mais críticos da web, os limites da lei e o caminho das certificações.</p></div></div>
       </div>
     </div>
-    <div class="panel" id="s2" role="tabpanel">
-      <div class="panel-head"><h3>Proteja <span class="g">as pessoas</span></h3><p>Os golpes que mais fazem vítimas e como se blindar contra eles.</p></div>
+    <div class="panel" id="m2" role="tabpanel">
+      <div class="panel-head"><h3>Fundamentos da <span class="g">segurança</span></h3><p>O que se protege, contra o quê e como.</p></div>
       <div class="mods">
-        <div class="mod"><span class="n">03</span><div><h4>Golpes e engenharia social</h4><p>Links falsos, WhatsApp clonado, falso suporte e golpes do Pix: como reconhecer cada um.</p></div></div>
-        <div class="mod"><span class="n">04</span><div><h4>Senhas e contas protegidas</h4><p>Senhas fortes e verificação em duas etapas nas contas que mais importam.</p></div></div>
+        <div class="mod"><span class="n">04</span><div><h4>O que é segurança da informação</h4><p>Por que dado é um ativo de valor e quanto custa um vazamento.</p></div></div>
+        <div class="mod"><span class="n">05</span><div><h4>A tríade CIA</h4><p>Confidencialidade, integridade e disponibilidade: o alvo de todo ataque.</p></div></div>
+        <div class="mod"><span class="n">06</span><div><h4>Ameaça, vulnerabilidade e risco</h4><p>Risco é probabilidade vezes impacto, e segurança é saber gerenciar isso.</p></div></div>
+        <div class="mod"><span class="n">07</span><div><h4>Tipos de ataques e de atacantes</h4><p>Malware, phishing, ransomware, DDoS e quem está por trás de cada um.</p></div></div>
+        <div class="mod"><span class="n">08</span><div><h4>Autenticação e controle de acesso</h4><p>Verificação em duas etapas e o princípio do menor privilégio.</p></div></div>
+        <div class="mod"><span class="n">09</span><div><h4>Engenharia social, o elo mais fraco</h4><p>Como golpistas enganam pessoas e como se defender.</p></div></div>
+        <div class="mod"><span class="n">10</span><div><h4>Cultura de segurança e LGPD</h4><p>Defesa em camadas e o que a lei exige das empresas.</p></div></div>
       </div>
     </div>
-    <div class="panel" id="s3" role="tabpanel">
-      <div class="panel-head"><h3>Proteja <span class="g">seus aparelhos</span></h3><p>Internet, Wi-Fi, celular e computador mais seguros.</p></div>
+    <div class="panel" id="m3" role="tabpanel">
+      <div class="panel-head"><h3>Dominando o <span class="g">Kali Linux</span></h3><p>Monte seu laboratório no Windows e domine o terminal.</p></div>
       <div class="mods">
-        <div class="mod"><span class="n">05</span><div><h4>Internet e Wi-Fi seguros</h4><p>O que significa o cadeado do navegador, o perigo do Wi-Fi público e como proteger o roteador de casa.</p></div></div>
-        <div class="mod"><span class="n">06</span><div><h4>Vírus, sequestro de dados e backup</h4><p>Como um vírus entra no seu aparelho e por que o backup salva pessoas e empresas.</p></div></div>
+        <div class="mod"><span class="n">11</span><div><h4>Por que usar o Kali Linux no WSL</h4><p>O sistema padrão do mercado de pentest rodando leve dentro do Windows.</p></div></div>
+        <div class="mod"><span class="n">12</span><div><h4>Requisitos e instalação com um comando</h4><p>Do zero ao Kali funcionando no seu computador.</p></div></div>
+        <div class="mod"><span class="n">13</span><div><h4>O desktop do Kali com o Win-KeX</h4><p>A área de trabalho do Kali numa janela do Windows.</p></div></div>
+        <div class="mod"><span class="n">14</span><div><h4>Modos do Win-KeX e quando usar cada um</h4><p>Terminal, janela ou modo integrado: o certo para cada tarefa.</p></div></div>
+        <div class="mod"><span class="n">15</span><div><h4>Comandos essenciais, sudo, apt e permissões</h4><p>Os comandos que você vai usar todo dia, sem decoreba.</p></div></div>
+        <div class="mod"><span class="n">16</span><div><h4>O arsenal do Kali por categoria</h4><p>Qual ferramenta resolve cada fase do pentest.</p></div></div>
+        <div class="mod"><span class="n">17</span><div><h4>Conferindo e instalando as ferramentas</h4><p>Seu kit essencial pronto para o resto do curso.</p></div></div>
       </div>
     </div>
-    <div class="panel" id="s4" role="tabpanel">
-      <div class="panel-head"><h3>IA e <span class="g">mercado</span></h3><p>Proteja empresas e transforme conhecimento em renda.</p></div>
+    <div class="panel" id="m4" role="tabpanel">
+      <div class="panel-head"><h3>Criptografia <span class="g">para hackers</span></h3><p>Onde a criptografia protege e onde ela é mal usada.</p></div>
       <div class="mods">
-        <div class="mod"><span class="n">07</span><div><h4>Sites de empresas e golpes com IA</h4><p>Os erros que deixam sites expostos e os golpes novos com voz clonada e vídeo falso.</p></div></div>
-        <div class="mod"><span class="n">08</span><div><h4>Como transformar isso em renda</h4><p>Como oferecer uma análise de segurança simples para pequenos negócios e o que entregar.</p></div></div>
+        <div class="mod"><span class="n">18</span><div><h4>O que é criptografia e onde ela protege</h4><p>Por que a segurança está na chave, não no algoritmo.</p></div></div>
+        <div class="mod"><span class="n">19</span><div><h4>Criptografia simétrica e o AES</h4><p>O padrão mundial que protege arquivos, bancos de dados e o HTTPS.</p></div></div>
+        <div class="mod"><span class="n">20</span><div><h4>Criptografia assimétrica, o par de chaves</h4><p>Chave pública, chave privada e assinatura digital.</p></div></div>
+        <div class="mod"><span class="n">21</span><div><h4>Hashing, a função de mão única</h4><p>Como senhas devem ser guardadas: bcrypt, Argon2 e salt.</p></div></div>
+        <div class="mod"><span class="n">22</span><div><h4>Testando a força de senhas na prática</h4><p>No seu laboratório, veja por que senha fraca cai na hora e senha longa não.</p></div></div>
+        <div class="mod"><span class="n">23</span><div><h4>HTTPS, TLS e o cadeado</h4><p>O que o cadeado do navegador garante e o que ele não garante.</p></div></div>
+        <div class="mod"><span class="n">24</span><div><h4>Erros clássicos de criptografia</h4><p>Os deslizes que mais expõem dados e o checklist para evitá-los.</p></div></div>
+      </div>
+    </div>
+    <div class="panel" id="m5" role="tabpanel">
+      <div class="panel-head"><h3>Dominando o <span class="g">recon</span></h3><p>A primeira fase do pentest, do jeito certo.</p></div>
+      <div class="mods">
+        <div class="mod"><span class="n">25</span><div><h4>O que é recon, passivo e ativo</h4><p>O que dá para descobrir antes de tocar em qualquer sistema.</p></div></div>
+        <div class="mod"><span class="n">26</span><div><h4>Recon via DNS</h4><p>O que os registros públicos revelam sobre uma empresa e como se proteger.</p></div></div>
+        <div class="mod"><span class="n">27</span><div><h4>DNS na prática</h4><p>A estrutura de um grande portal mapeada só com dados públicos.</p></div></div>
+        <div class="mod"><span class="n">28</span><div><h4>Google Hacking, os operadores de busca</h4><p>Como achar o que já está exposto e indexado no Google.</p></div></div>
+        <div class="mod"><span class="n">29</span><div><h4>Combinando operadores e o GHDB</h4><p>Busque no seu próprio domínio e ache vazamentos antes dos outros.</p></div></div>
+        <div class="mod"><span class="n">30</span><div><h4>Nmap, mapeando portas e serviços</h4><p>Descubra o que está rodando em cada máquina e por que isso importa.</p></div></div>
+        <div class="mod"><span class="n">31</span><div><h4>Nmap na prática</h4><p>Varredura num alvo de treino autorizado e na sua própria rede.</p></div></div>
+      </div>
+    </div>
+    <div class="panel" id="mx" role="tabpanel">
+      <div class="panel-head"><h3>Próximos <span class="g">módulos</span></h3><p>Em produção. Vão sendo liberados na área de membros.</p></div>
+      <div class="mods soon">
+        <div class="mod"><span class="n">M06</span><div><h4>Pentest em redes</h4><p>Enumeração de serviços, análise de tráfego e defesa da rede.</p></div></div>
+        <div class="mod"><span class="n">M07</span><div><h4>Desenvolvimento web para pentesters</h4><p>HTTP, cookies, sessões e APIs: como a web funciona por dentro.</p></div></div>
+        <div class="mod"><span class="n">M08</span><div><h4>Falhas em aplicações web</h4><p>As vulnerabilidades mais comuns em sites e sistemas, e como corrigir.</p></div></div>
+        <div class="mod"><span class="n">M09</span><div><h4>Pentest em nuvem</h4><p>Permissões, arquivos expostos e segredos vazados na nuvem.</p></div></div>
+        <div class="mod"><span class="n">M10</span><div><h4>Automação para hackers</h4><p>Bash e Python para automatizar análises e relatórios.</p></div></div>
+        <div class="mod"><span class="n">M11</span><div><h4>IA para pentest web</h4><p>IA como copiloto de segurança e os novos riscos dos sistemas com IA.</p></div></div>
       </div>
     </div>
 
@@ -385,7 +428,7 @@ footer p+p{margin-top:8px;max-width:640px;margin-inline:auto}
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
       <div>
         <h3>Sabemos atacar. <span class="g">Por isso ensinamos a proteger.</span></h3>
-        <p>Ninguém defende bem o que não entende. Neste curso você aprende como os ataques hacker funcionam por dentro para proteger você e as empresas contra eles, com exemplos do dia a dia e tarefas rápidas nas suas próprias contas e aparelhos.</p>
+        <p>A técnica é a mesma do criminoso. O que muda é a autorização e a intenção. Neste curso você aprende como os ataques funcionam por dentro para proteger os seus sistemas e os de quem te contratar, praticando sempre no seu próprio laboratório, na sua própria rede ou em alvos de treino feitos para isso.</p>
         <p><strong>Não ensinamos a invadir sistemas sem autorização.</strong> Invadir sistemas de terceiros sem permissão é crime, e esse não é o nosso trabalho.</p>
       </div>
     </div>
@@ -412,10 +455,11 @@ footer p+p{margin-top:8px;max-width:640px;margin-inline:auto}
 
     <div class="box reveal" style="position:relative">
       <ul class="items">
-        <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>Curso Hacker Ético do Zero (8 aulas)</span><span class="inc">Incluso</span></li>
-        <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>Checklists de segurança pessoal e de sites</span><span class="inc">Incluso</span></li>
-        <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>Aula de golpes com IA e como se proteger</span><span class="inc">Incluso</span></li>
-        <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>Como conseguir seus primeiros clientes</span><span class="inc">Incluso</span></li>
+        <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>Curso Hacker Ético do Zero (5 módulos, 31 aulas)</span><span class="inc">Incluso</span></li>
+        <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>Laboratório Kali Linux passo a passo</span><span class="inc">Incluso</span></li>
+        <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>Práticas guiadas de senhas, DNS, Google Hacking e Nmap</span><span class="inc">Incluso</span></li>
+        <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>Checklist de criptografia segura</span><span class="inc">Incluso</span></li>
+        <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>Novos módulos: redes, web, nuvem e IA</span><span class="inc">Em breve</span></li>
         <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>Suporte para tirar dúvidas</span><span class="inc">Incluso</span></li>
         <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>Certificado de conclusão</span><span class="inc">Incluso</span></li>
         <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>Garantia incondicional de 7 dias</span><span class="inc">Incluso</span></li>
@@ -455,8 +499,8 @@ footer p+p{margin-top:8px;max-width:640px;margin-inline:auto}
           <li>Quer entrar na área de tecnologia por uma porta com alta demanda</li>
           <li>Nunca estudou segurança e quer começar do zero absoluto</li>
           <li>Quer uma renda extra prestando serviços para empresas</li>
-          <li>Quer proteger sua família e seu negócio de golpes</li>
-          <li>Quer entender como a IA mudou os ataques e as defesas</li>
+          <li>Já é de TI e quer se especializar em cibersegurança</li>
+          <li>Desenvolve sites ou sistemas e quer protegê-los de verdade</li>
         </ul>
       </div>
       <div class="card reveal">
@@ -513,12 +557,12 @@ footer p+p{margin-top:8px;max-width:640px;margin-inline:auto}
       <h2 class="display">Antes de você <span class="g">perguntar</span></h2>
     </div>
     <div class="faq">
-      <details open><summary>Preciso saber programar?</summary><p>Não. O curso começa do zero absoluto, em linguagem simples e com exemplos do dia a dia.</p></details>
-      <details><summary>Hacking ético é legal?</summary><p>Sim. O hacker ético trabalha para proteger: encontra falhas com autorização e ajuda a corrigi-las. Você aprende os limites legais logo na primeira aula.</p></details>
-      <details><summary>O curso ensina a invadir sistemas?</summary><p>Não. Você aprende como os ataques funcionam para saber se proteger e proteger empresas contra eles. Não ensinamos a invadir sistemas sem autorização, o que é crime.</p></details>
+      <details open><summary>Preciso saber programar?</summary><p>Não. O curso começa do zero absoluto, da teoria ao terminal, e você aprende cada comando no momento em que vai usar.</p></details>
+      <details><summary>Hacking ético é legal?</summary><p>Sim. O hacker ético trabalha para proteger: encontra falhas com autorização por escrito e ajuda a corrigi-las. Toda prática do curso é feita no seu laboratório, na sua própria rede ou em alvos de treino autorizados, e você aprende os limites legais logo no primeiro módulo.</p></details>
+      <details><summary>O curso ensina a invadir sistemas?</summary><p>Não sem autorização. Você aprende as técnicas de um pentest, o teste de segurança contratado, para proteger os seus sistemas e os de quem te contratar. Invadir sistemas de terceiros sem permissão é crime, e esse não é o nosso trabalho.</p></details>
       <details><summary>Quanto custa?</summary><p>R$ 97 à vista ou 12x de R$ 10,03 no cartão. Pagamento único, sem mensalidade.</p></details>
-      <details><summary>Qual computador eu preciso?</summary><p>Um celular ou computador com internet já resolve. As tarefas são feitas nas suas próprias contas e aparelhos, sem instalar nada complicado.</p></details>
-      <details><summary>Quanto tempo vou precisar?</summary><p>As aulas têm de 15 a 20 minutos, 2 por semana. Somando as tarefas rápidas, é menos de 1 hora por semana, e você segue no seu ritmo.</p></details>
+      <details><summary>Qual computador eu preciso?</summary><p>Um computador com Windows 10 ou 11, a virtualização ligada e de 5 a 10 GB livres. No módulo 3 você instala o Kali Linux com um único comando, passo a passo.</p></details>
+      <details><summary>Quanto tempo vou precisar?</summary><p>As aulas têm de 3 a 6 minutos. Com cerca de 30 minutos por dia, entre aulas e práticas, você conclui os 5 módulos em 30 dias, no seu ritmo.</p></details>
       <details><summary>Tem certificado?</summary><p>Sim. Ao concluir as aulas você recebe um certificado de conclusão do curso.</p></details>
       <details><summary>Vou ter suporte?</summary><p>Sim. Você conta com suporte da nossa equipe para tirar dúvidas sobre o conteúdo das aulas.</p></details>
       <details><summary>Como recebo o acesso?</summary><p>Logo após a confirmação do pagamento você recebe o acesso por e-mail. No Pix e no cartão é na hora.</p></details>
@@ -549,7 +593,7 @@ footer p+p{margin-top:8px;max-width:640px;margin-inline:auto}
   <div class="wrap">
     <div class="logo">Hacker <span class="g">Ético</span></div>
     <p>© <span id="yr">2026</span> · Todos os direitos reservados</p>
-    <p>Este site não é afiliado ao Facebook, Instagram, Google ou qualquer outra plataforma. Os resultados variam de acordo com a dedicação de cada aluno. Este curso ensina apenas a se proteger de ataques hacker. Não ensinamos a invadir sistemas sem autorização.</p>
+    <p>Este site não é afiliado ao Facebook, Instagram, Google ou qualquer outra plataforma. Os resultados variam de acordo com a dedicação de cada aluno. Este curso ensina testes de segurança autorizados e proteção de sistemas. Não ensinamos a invadir sistemas sem autorização.</p>
   </div>
 </footer>
 
