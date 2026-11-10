@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Engenheiro de IA em 30 Dias</title>
+<meta name="description" content="Se torne um engenheiro de IA em 30 dias e aprenda como a cibersegurança e a inteligência artificial operam juntas para proteger sistemas. Bônus do curso Hacker Ético em 30 dias.">
+<meta property="og:title" content="Se torne um Engenheiro de IA em 30 dias">
+<meta property="og:description" content="Cibersegurança e inteligência artificial juntas para proteger sistemas. Bônus do Hacker Ético em 30 dias.">
+<meta property="og:image" content="imagem/ia/capa-ia.jpg">
+<meta name="theme-color" content="#050505">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#050505; --bg-2:#090b0a; --card:#0e1210;
+  --line:#233027; --line-soft:#161d18;
+  --ink:#f0f6f1; --muted:#96a69b;
+  --green:#35e07a; --green-dim:#1fa85a; --green-light:#8be09a; --green-deep:#0a4a24;
+  --on-green:#04150b; --glow:#35e07a99; --glow-soft:#35e07a4d;
+  --display:"Anton",Impact,"Arial Narrow",sans-serif;
+  --sans:"Inter",system-ui,-apple-system,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,"SF Mono",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{width:100%;max-width:1120px;margin-inline:auto;padding-inline:20px}
+@media(min-width:640px){.wrap{padding-inline:32px}}
+.g{color:var(--green)}
+.display{font-family:var(--display);text-transform:uppercase;font-weight:400;line-height:.95;letter-spacing:.005em}
+.eyebrow{font-family:var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--green);font-size:11px}
+.dot{display:inline-block;background:var(--green);width:8px;height:8px;border-radius:999px;box-shadow:0 0 12px 2px var(--glow);animation:blink 2s ease-in-out infinite}
+@keyframes blink{50%{opacity:.35}}
+section{position:relative}
+.sec{padding:80px 0}
+@media(min-width:640px){.sec{padding:112px 0}}
+.center{text-align:center}
+h2.display{font-size:clamp(40px,7vw,80px);margin-top:20px}
+.lead{max-width:600px;margin:16px auto 0;font-size:17px;color:var(--muted)}
+
+/* CTA */
+.cta{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-family:var(--display);text-transform:uppercase;letter-spacing:.04em;line-height:1;
+  background:var(--green-dim);color:#fff;border-radius:12px;padding:20px 32px;font-size:20px;
+  border:1.5px solid rgba(53,224,122,.6);box-shadow:0 0 0 0 var(--glow),0 10px 40px -10px var(--glow);
+  transition:transform .2s, box-shadow .2s, background .2s;overflow:hidden;text-align:center}
+.cta:hover{transform:translateY(-2px);background:#22b862;box-shadow:0 0 0 4px rgba(53,224,122,.15),0 14px 50px -8px var(--glow)}
+.cta:after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.28) 50%,transparent 70%);transform:translateX(-100%);animation:shine 3.2s ease-in-out infinite}
+@keyframes shine{60%,100%{transform:translateX(100%)}}
+.cta-full{width:100%}
+@media(min-width:640px){.cta-full{width:auto}}
+
+/* Header */
+header{border-bottom:1px solid var(--line-soft);background:var(--bg)}
+.hdr{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:16px}
+.logo{font-family:var(--display);text-transform:uppercase;font-size:22px;line-height:1}
+.back{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:8px 14px;white-space:nowrap}
+.back:hover{color:var(--ink);border-color:rgba(53,224,122,.4)}
+
+/* Espaço de imagem: mostra o aviso enquanto o arquivo não existir */
+.slot{position:relative;display:block;width:100%;border:1px solid rgba(53,224,122,.35);border-radius:24px;overflow:hidden;background:radial-gradient(60% 60% at 50% 40%,#123d24,transparent 70%),var(--bg-2)}
+.slot img{width:100%;height:100%;object-fit:cover}
+.slot .ph{display:none;position:absolute;inset:0;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:16px;text-align:center;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.slot .ph b{font-family:var(--sans);font-size:14px;letter-spacing:0;text-transform:none;color:var(--ink)}
+.slot.empty{border-style:dashed}
+.slot.empty img{display:none}
+.slot.empty .ph{display:flex}
+
+/* Hero */
+.hero{overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(75% 40% at 50% 30%,var(--glow-soft),transparent 72%)}
+.hero-in{position:relative;display:grid;gap:32px;align-items:center;padding-block:40px 64px}
+.hero .slot{max-width:480px;margin:0 auto;aspect-ratio:4/5;box-shadow:0 0 90px -30px var(--glow)}
+.hero-txt{text-align:center}
+.badge-top{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(53,224,122,.35);background:rgba(14,18,16,.8);border-radius:999px;padding:6px 14px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--green-light);margin-bottom:18px}
+h1{font-size:clamp(36px,9.6vw,64px);font-weight:600;line-height:1.06;letter-spacing:-.02em}
+h1 .g{font-weight:800}
+.sub{max-width:520px;margin:16px auto 0;font-size:17px;font-weight:500;line-height:1.4;color:rgba(240,246,241,.85)}
+@media(min-width:640px){.sub{font-size:19px}}
+.free{margin-top:24px;display:inline-flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center}
+.free .big{font-family:var(--display);font-size:52px;line-height:1;color:var(--green);text-shadow:0 0 30px var(--glow-soft);text-transform:uppercase}
+.free .side{text-align:left;font-size:13px;color:var(--muted);line-height:1.35}
+.free .side strong{color:var(--ink);font-size:15px}
+.hero-cta{margin-top:22px}
+.hero-cta p{margin-top:12px;font-size:12px;color:var(--muted)}
+@media(min-width:1024px){
+  .hero:before{background:radial-gradient(40% 60% at 72% 50%,var(--glow-soft),transparent 72%)}
+  .hero-in{grid-template-columns:1.05fr .95fr;gap:48px;padding-block:64px;min-height:calc(100svh - 70px)}
+  .hero .slot{order:2;max-width:520px;margin:0 0 0 auto}
+  .hero-txt{order:1;text-align:left}
+  .sub{margin-left:0}
+  .free{justify-content:flex-start}
+}
+
+/* Cards */
+.grid3{display:grid;gap:16px;margin-top:48px}
+@media(min-width:768px){.grid3{grid-template-columns:repeat(3,1fr)}}
+.grid2{display:grid;gap:16px;margin-top:48px}
+@media(min-width:768px){.grid2{grid-template-columns:1fr 1fr}}
+.card{border:1px solid var(--line);background:var(--card);border-radius:20px;padding:26px}
+.card .num{font-family:var(--display);font-size:40px;color:var(--green);line-height:1}
+.card h3{font-size:18px;margin-top:12px}
+.card p{color:var(--muted);font-size:15px;margin-top:8px}
+
+/* Galeria */
+.gallery{display:grid;gap:16px;margin-top:48px}
+@media(min-width:768px){.gallery{grid-template-columns:repeat(3,1fr)}}
+.gallery .slot{aspect-ratio:1/1}
+
+/* Oferta */
+.offer{max-width:760px}
+.box{border:1px solid rgba(53,224,122,.4);background:var(--card);border-radius:24px;padding:22px;box-shadow:0 0 120px -40px var(--glow);margin-top:40px}
+@media(min-width:640px){.box{padding:34px}}
+.duo{display:grid;gap:12px}
+@media(min-width:640px){.duo{grid-template-columns:1fr auto 1fr;align-items:stretch}}
+.duo .c{border:1px solid var(--line);background:var(--bg-2);border-radius:16px;padding:20px;text-align:center}
+.duo .c.bonus{border-color:rgba(53,224,122,.5);background:rgba(53,224,122,.07)}
+.duo .c span{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.duo .c.bonus span{color:var(--green)}
+.duo .c h3{font-family:var(--display);text-transform:uppercase;font-weight:400;font-size:26px;line-height:1.05;margin-top:8px}
+.duo .c p{color:var(--muted);font-size:14px;margin-top:6px}
+.duo .plus{display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:36px;color:var(--green)}
+.price-box{margin-top:26px;border-top:1px dashed var(--line);padding-top:26px;text-align:center}
+.pb-label{font-size:14px;color:var(--muted)}
+.pb-big{font-family:var(--display);color:var(--green);line-height:.9;font-size:clamp(96px,22vw,150px);text-shadow:0 0 50px var(--glow-soft);margin-top:4px}
+.pb-big sup{font-size:.3em;vertical-align:top;position:relative;top:.35em;margin-right:6px}
+.pb-alt{font-size:17px;margin-top:8px}
+.pb-alt strong{color:var(--green)}
+.price-box .cta{margin-top:22px}
+.pb-foot{margin-top:12px;font-size:12px;color:var(--muted)}
+
+/* Final */
+.final{text-align:center;overflow:hidden}
+.final:before{content:"";position:absolute;inset:0;background:radial-gradient(50% 60% at 50% 50%,var(--glow-soft),transparent 70%);pointer-events:none}
+
+footer{border-top:1px solid var(--line-soft);padding:40px 0 110px;color:var(--muted);font-size:12px;text-align:center}
+@media(min-width:768px){footer{padding-bottom:40px}}
+footer .logo{font-size:20px;color:var(--ink);margin-bottom:10px}
+footer p+p{margin-top:8px;max-width:640px;margin-inline:auto}
+
+/* Barra fixa no mobile */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(5,5,5,.92);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 16px;display:flex;align-items:center;gap:12px;transform:translateY(110%);transition:transform .3s}
+.sticky.show{transform:none}
+.sticky .sp{line-height:1.15}
+.sticky .sp strong{font-family:var(--display);font-weight:400;color:var(--green);font-size:26px}
+.sticky .sp span{display:block;font-size:11px;color:var(--muted)}
+.sticky .cta{flex:1;padding:14px 12px;font-size:16px}
+@media(min-width:768px){.sticky{display:none}}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.cta:after,.dot{animation:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hdr">
+    <a href="#top" class="logo">Engenheiro <span class="g">de IA</span></a>
+    <a href="index.html" class="back">← Hacker Ético</a>
+  </div>
+</header>
+
+<main>
+<!-- ==================== HERO ==================== -->
+<section id="top" class="hero">
+  <div class="wrap hero-in">
+    <!-- Imagem: coloque o arquivo em imagem/ia/hero-ia.jpg (1080 × 1350, vertical) -->
+    <div class="slot">
+      <img src="imagem/ia/hero-ia.jpg" alt="Curso Se torne um Engenheiro de IA em 30 dias" width="1080" height="1350" fetchpriority="high" onerror="this.parentNode.classList.add('empty')">
+      <span class="ph"><b>Imagem principal do curso de IA</b>imagem/ia/hero-ia.jpg · 1080 × 1350</span>
+    </div>
+    <div class="hero-txt">
+      <span class="badge-top"><span class="dot"></span> Bônus do Hacker Ético em 30 dias</span>
+      <h1>Se torne um <span class="g">engenheiro de IA</span> em 30 dias</h1>
+      <p class="sub">Aprenda como a <strong class="g">cibersegurança e a inteligência artificial</strong> operam juntas para proteger sistemas.</p>
+
+      <div class="free">
+        <span class="big">Bônus</span>
+        <span class="side"><strong>Vem junto com o Hacker Ético</strong><br>os 2 cursos por R$ 97 ou 12x de R$ 10,03</span>
+      </div>
+
+      <div class="hero-cta">
+        <a class="cta cta-full js-checkout" href="#" target="_blank" rel="noopener">Quero os 2 cursos por R$ 97</a>
+        <p>Pagamento único · 7 dias de garantia · Acesso imediato</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== POR QUE IA + SEGURANÇA ==================== -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="center reveal">
+      <p class="eyebrow">Por que IA e segurança juntas</p>
+      <h2 class="display">A IA mudou o jogo <span class="g">dos dois lados.</span></h2>
+      <p class="lead">Quem ataca já usa inteligência artificial. Quem defende precisa usar também, e entender os riscos dos próprios sistemas com IA.</p>
+    </div>
+    <div class="grid3">
+      <div class="card reveal"><div class="num">01</div><h3>Os atacantes já usam IA</h3><p>Golpes, invasões e vazamentos ficaram mais rápidos e mais baratos de fazer.</p></div>
+      <div class="card reveal"><div class="num">02</div><h3>A defesa também precisa usar</h3><p>A IA ajuda a detectar ataques, analisar falhas e responder a incidentes em menos tempo.</p></div>
+      <div class="card reveal"><div class="num">03</div><h3>Quem domina os dois sai na frente</h3><p>Entender segurança e IA juntas ainda é uma combinação rara no mercado.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== O QUE VOCÊ VAI APRENDER ==================== -->
+<!-- Troque estes 4 temas pelos módulos reais do curso de IA quando o conteúdo estiver fechado -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="center reveal">
+      <p class="eyebrow">Por dentro</p>
+      <h2 class="display">O que você vai <span class="g">aprender</span></h2>
+    </div>
+    <div class="grid2">
+      <div class="card reveal"><div class="num">01</div><h3>Fundamentos de IA</h3><p>O que é inteligência artificial, como os modelos funcionam e onde ela já está no seu dia a dia.</p></div>
+      <div class="card reveal"><div class="num">02</div><h3>IA na defesa</h3><p>Como usar IA para detectar ameaças, analisar registros e encontrar falhas mais rápido.</p></div>
+      <div class="card reveal"><div class="num">03</div><h3>Segurança de sistemas com IA</h3><p>Os novos riscos das aplicações que usam IA e como protegê-las.</p></div>
+      <div class="card reveal"><div class="num">04</div><h3>IA como sua copiloto</h3><p>Automatize tarefas repetitivas e ganhe tempo no trabalho de segurança.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== GALERIA ==================== -->
+<!-- Imagens: coloque os arquivos em imagem/ia/ia-1.jpg, ia-2.jpg e ia-3.jpg (1080 × 1080, quadradas) -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="center reveal">
+      <p class="eyebrow">Veja por dentro</p>
+      <h2 class="display">Um pouco do <span class="g">curso</span></h2>
+    </div>
+    <div class="gallery">
+      <div class="slot reveal">
+        <img src="imagem/ia/ia-1.jpg" alt="Prévia do curso de IA" width="1080" height="1080" loading="lazy" onerror="this.parentNode.classList.add('empty')">
+        <span class="ph"><b>Imagem 1</b>imagem/ia/ia-1.jpg · 1080 × 1080</span>
+      </div>
+      <div class="slot reveal">
+        <img src="imagem/ia/ia-2.jpg" alt="Prévia do curso de IA" width="1080" height="1080" loading="lazy" onerror="this.parentNode.classList.add('empty')">
+        <span class="ph"><b>Imagem 2</b>imagem/ia/ia-2.jpg · 1080 × 1080</span>
+      </div>
+      <div class="slot reveal">
+        <img src="imagem/ia/ia-3.jpg" alt="Prévia do curso de IA" width="1080" height="1080" loading="lazy" onerror="this.parentNode.classList.add('empty')">
+        <span class="ph"><b>Imagem 3</b>imagem/ia/ia-3.jpg · 1080 × 1080</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== OFERTA ==================== -->
+<section id="oferta" class="sec" style="background:var(--bg-2);border-block:1px solid var(--line-soft)">
+  <div class="wrap offer">
+    <div class="center reveal">
+      <p class="eyebrow">A oferta</p>
+      <h2 class="display">Dois cursos, <span class="g">um preço.</span></h2>
+      <p class="lead">Você entra no Hacker Ético em 30 dias e leva o curso de IA junto, sem pagar nada a mais.</p>
+    </div>
+    <div class="box reveal">
+      <div class="duo">
+        <div class="c"><span>Curso principal</span><h3>Hacker Ético do Zero</h3><p>5 módulos e 31 aulas, do zero ao primeiro pentest</p></div>
+        <div class="plus">+</div>
+        <div class="c bonus"><span>Bônus incluso</span><h3>Engenheiro de IA em 30 dias</h3><p>Cibersegurança e IA juntas para proteger sistemas</p></div>
+      </div>
+      <div class="price-box">
+        <p class="pb-label">Você paga uma única vez pelos dois</p>
+        <div class="pb-big"><sup>R$</sup>97</div>
+        <p class="pb-alt">ou <strong>12x de R$ 10,03</strong> no cartão</p>
+        <a class="cta cta-full js-checkout" href="#" target="_blank" rel="noopener">Garantir os 2 cursos por R$ 97</a>
+        <p class="pb-foot">Pagamento seguro via Kiwify · Pix, boleto ou cartão · 7 dias de garantia</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CTA FINAL ==================== -->
+<section class="sec final">
+  <div class="wrap" style="position:relative">
+    <h2 class="display">Segurança e IA, <span class="g">no mesmo lugar.</span></h2>
+    <p class="lead">Aprenda a proteger sistemas do jeito que o mercado já está pedindo.</p>
+    <div style="margin-top:28px"><a class="cta cta-full js-checkout" href="#" target="_blank" rel="noopener">Quero começar agora por R$ 97</a></div>
+    <p class="pb-foot" style="margin-top:16px"><a class="g" href="index.html">← Ver tudo sobre o curso Hacker Ético</a></p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="logo">Engenheiro <span class="g">de IA</span></div>
+    <p>© <span id="yr">2026</span> · Todos os direitos reservados</p>
+    <p>Este site não é afiliado ao Facebook, Instagram, Google ou qualquer outra plataforma. Os resultados variam de acordo com a dedicação de cada aluno. Ensinamos testes de segurança autorizados e proteção de sistemas. Não ensinamos a invadir sistemas sem autorização.</p>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky">
+  <div class="sp"><strong>R$ 97</strong><span>os 2 cursos</span></div>
+  <a class="cta js-checkout" href="#" target="_blank" rel="noopener">Quero entrar</a>
+</div>
+
+<script>
+/* Link de checkout (Kiwify), o mesmo da página principal. Os parâmetros UTM de quem chegou são repassados. */
+var CHECKOUT = "https://pay.kiwify.com.br/Bk2RQhP?utm_source=ig&utm_medium=social&utm_content=link_in_bio&utm_id=97760_v0_s00_e0_tv3";
+
+(function(){
+  var url;
+  try{
+    url = new URL(CHECKOUT);
+    new URLSearchParams(location.search).forEach(function(v,k){ if(/^(utm_|src|sck|fbclid|gclid)/.test(k)) url.searchParams.set(k,v); });
+    url = url.toString();
+  }catch(e){ url = CHECKOUT; }
+  document.querySelectorAll('.js-checkout').forEach(function(a){ a.href = url; });
+})();
+
+(function(){
+  var els = document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){ els.forEach(function(e){ e.classList.add('in'); }); return; }
+  var io = new IntersectionObserver(function(en){ en.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); },{threshold:.12});
+  els.forEach(function(e){ io.observe(e); });
+})();
+
+(function(){
+  var s = document.getElementById('sticky'), hero = document.getElementById('top');
+  window.addEventListener('scroll', function(){ s.classList.toggle('show', window.scrollY > hero.offsetHeight * .8); }, {passive:true});
+})();
+
+document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

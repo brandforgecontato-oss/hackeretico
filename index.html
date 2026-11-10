@@ -156,6 +156,26 @@ h1 .g{font-weight:800}
 .notice p strong{color:var(--ink)}
 @media(max-width:520px){.notice{flex-direction:column;gap:12px}}
 
+/* Bônus: curso de IA */
+.bonus{display:grid;gap:28px;align-items:center;border:1px solid rgba(53,224,122,.4);background:linear-gradient(135deg,rgba(53,224,122,.08),var(--card) 55%);border-radius:28px;padding:20px;box-shadow:0 0 120px -50px var(--glow)}
+@media(min-width:900px){.bonus{grid-template-columns:1.05fr .95fr;gap:44px;padding:32px}}
+.bonus-tag{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:var(--on-green);border-radius:999px;padding:6px 14px;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.bonus h2.display{font-size:clamp(34px,4.6vw,52px);margin-top:16px;line-height:1}
+.bonus-txt > p{color:var(--muted);margin-top:14px;font-size:16px}
+.bonus .list{margin-top:18px}
+.bonus-ctas{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-top:26px}
+@media(max-width:639px){.bonus .cta{font-size:18px;padding:18px 16px}}
+.link-more{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--green);border-bottom:1px solid rgba(53,224,122,.4);padding-bottom:2px}
+.link-more:hover{color:var(--ink)}
+/* Espaço de imagem: mostra o aviso enquanto o arquivo não existir */
+.slot{position:relative;display:block;width:100%;border:1px solid rgba(53,224,122,.35);border-radius:20px;overflow:hidden;background:radial-gradient(60% 60% at 50% 40%,#123d24,transparent 70%),var(--bg-2)}
+.slot img{width:100%;height:100%;object-fit:cover}
+.slot .ph{display:none;position:absolute;inset:0;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:16px;text-align:center;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.slot .ph b{font-family:var(--sans);font-size:14px;letter-spacing:0;text-transform:none;color:var(--ink)}
+.slot.empty{border-style:dashed}
+.slot.empty img{display:none}
+.slot.empty .ph{display:flex}
+
 /* Offer */
 .offer{max-width:760px}
 .box{border:1px solid rgba(53,224,122,.4);background:var(--card);border-radius:24px;padding:22px;box-shadow:0 0 120px -40px var(--glow);margin-top:40px}
@@ -308,6 +328,7 @@ footer p+p{margin-top:8px;max-width:640px;margin-inline:auto}
           <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/></svg>Compra segura</span>
           <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>7 dias de garantia</span>
           <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>Acesso imediato</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg><a href="#bonus-ia">Curso de IA de bônus</a></span>
         </div>
       </div>
     </div>
@@ -317,8 +338,8 @@ footer p+p{margin-top:8px;max-width:640px;margin-inline:auto}
 <!-- ==================== FAIXA ==================== -->
 <div class="marquee" aria-hidden="true">
   <div class="mtrack">
-    <span class="hl">Só R$ 97</span><span>Hacker ético em 30 dias</span><span class="hl">12x de R$ 10,03</span><span>Do zero, sem saber programar</span><span class="hl">Só R$ 97</span><span>Laboratório Kali Linux</span><span class="hl">7 dias de garantia</span><span>Certificado de conclusão</span>
-    <span class="hl">Só R$ 97</span><span>Hacker ético em 30 dias</span><span class="hl">12x de R$ 10,03</span><span>Do zero, sem saber programar</span><span class="hl">Só R$ 97</span><span>Laboratório Kali Linux</span><span class="hl">7 dias de garantia</span><span>Certificado de conclusão</span>
+    <span class="hl">Só R$ 97</span><span>Hacker ético em 30 dias</span><span class="hl">12x de R$ 10,03</span><span>Do zero, sem saber programar</span><span class="hl">+ Curso de IA de bônus</span><span>Laboratório Kali Linux</span><span class="hl">7 dias de garantia</span><span>Certificado de conclusão</span>
+    <span class="hl">Só R$ 97</span><span>Hacker ético em 30 dias</span><span class="hl">12x de R$ 10,03</span><span>Do zero, sem saber programar</span><span class="hl">+ Curso de IA de bônus</span><span>Laboratório Kali Linux</span><span class="hl">7 dias de garantia</span><span>Certificado de conclusão</span>
   </div>
 </div>
 
@@ -437,6 +458,33 @@ footer p+p{margin-top:8px;max-width:640px;margin-inline:auto}
   </div>
 </section>
 
+<!-- ==================== BÔNUS: CURSO DE IA ==================== -->
+<section id="bonus-ia" class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="bonus reveal">
+      <!-- Imagem: coloque o arquivo em imagem/ia/capa-ia.jpg (1600 × 900) e ela aparece aqui -->
+      <a href="ia.html" class="slot" style="aspect-ratio:16/9" aria-label="Conhecer o curso Se torne um Engenheiro de IA em 30 dias">
+        <img src="imagem/ia/capa-ia.jpg" alt="Curso Se torne um Engenheiro de IA em 30 dias" width="1600" height="900" loading="lazy" onerror="this.parentNode.classList.add('empty')">
+        <span class="ph"><b>Imagem do curso de IA</b>imagem/ia/capa-ia.jpg · 1600 × 900</span>
+      </a>
+      <div class="bonus-txt">
+        <span class="bonus-tag">+ Bônus incluso</span>
+        <h2 class="display">Junto com o curso: <span class="g">se torne um engenheiro de IA em 30 dias</span></h2>
+        <p>Quem entra no Hacker Ético leva também o curso de Inteligência Artificial, sem pagar nada a mais. Aprenda como a cibersegurança e a inteligência artificial operam juntas para proteger sistemas.</p>
+        <ul class="list">
+          <li>Como a IA ajuda a detectar ataques e analisar falhas mais rápido</li>
+          <li>Os novos riscos dos sistemas que usam IA e como protegê-los</li>
+          <li>A IA como sua copiloto no dia a dia da segurança</li>
+        </ul>
+        <div class="bonus-ctas">
+          <a class="cta cta-full js-checkout" href="#" target="_blank" rel="noopener">Quero os 2 cursos por R$ 97</a>
+          <a class="link-more" href="ia.html">Ver o curso de IA →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ==================== OFERTA / PREÇO ==================== -->
 <section id="oferta" class="sec" style="background:var(--bg-2);border-block:1px solid var(--line-soft)">
   <div class="wrap offer">
@@ -456,6 +504,7 @@ footer p+p{margin-top:8px;max-width:640px;margin-inline:auto}
     <div class="box reveal" style="position:relative">
       <ul class="items">
         <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>Curso Hacker Ético do Zero (5 módulos, 31 aulas)</span><span class="inc">Incluso</span></li>
+        <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>Curso Se torne um Engenheiro de IA em 30 dias</span><span class="inc">Bônus</span></li>
         <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>Laboratório Kali Linux passo a passo</span><span class="inc">Incluso</span></li>
         <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>Práticas guiadas de senhas, DNS, Google Hacking e Nmap</span><span class="inc">Incluso</span></li>
         <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>Checklist de criptografia segura</span><span class="inc">Incluso</span></li>
@@ -561,6 +610,7 @@ footer p+p{margin-top:8px;max-width:640px;margin-inline:auto}
       <details><summary>Hacking ético é legal?</summary><p>Sim. O hacker ético trabalha para proteger: encontra falhas com autorização por escrito e ajuda a corrigi-las. Toda prática do curso é feita no seu laboratório, na sua própria rede ou em alvos de treino autorizados, e você aprende os limites legais logo no primeiro módulo.</p></details>
       <details><summary>O curso ensina a invadir sistemas?</summary><p>Não sem autorização. Você aprende as técnicas de um pentest, o teste de segurança contratado, para proteger os seus sistemas e os de quem te contratar. Invadir sistemas de terceiros sem permissão é crime, e esse não é o nosso trabalho.</p></details>
       <details><summary>Quanto custa?</summary><p>R$ 97 à vista ou 12x de R$ 10,03 no cartão. Pagamento único, sem mensalidade.</p></details>
+      <details><summary>O curso de IA vem junto mesmo?</summary><p>Sim. Quem compra o Hacker Ético recebe junto o curso Se torne um Engenheiro de IA em 30 dias, sem pagar nada a mais. <a class="g" href="ia.html">Veja o que tem no curso de IA</a>.</p></details>
       <details><summary>Qual computador eu preciso?</summary><p>Um computador com Windows 10 ou 11, a virtualização ligada e de 5 a 10 GB livres. No módulo 3 você instala o Kali Linux com um único comando, passo a passo.</p></details>
       <details><summary>Quanto tempo vou precisar?</summary><p>As aulas têm de 3 a 6 minutos. Com cerca de 30 minutos por dia, entre aulas e práticas, você conclui os 5 módulos em 30 dias, no seu ritmo.</p></details>
       <details><summary>Tem certificado?</summary><p>Sim. Ao concluir as aulas você recebe um certificado de conclusão do curso.</p></details>

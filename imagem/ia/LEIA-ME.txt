@@ -1,0 +1,10 @@
+Coloque aqui as imagens do curso de IA, em JPG, com exatamente estes nomes.
+Assim que o arquivo estiver na pasta, ele aparece sozinho no lugar reservado da página.
+
+capa-ia.jpg  - 1600 x 900  (horizontal)  - seção de bônus na página principal (index.html)
+hero-ia.jpg  - 1080 x 1350 (vertical)    - topo da página do curso de IA (ia.html)
+ia-1.jpg     - 1080 x 1080 (quadrada)    - galeria "Um pouco do curso" (ia.html)
+ia-2.jpg     - 1080 x 1080 (quadrada)    - galeria (ia.html)
+ia-3.jpg     - 1080 x 1080 (quadrada)    - galeria (ia.html)
+
+Se as imagens vierem em PNG ou em outro tamanho, é só pedir para o Claude converter e ajustar.
