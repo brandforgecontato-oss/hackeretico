@@ -157,7 +157,11 @@ h1 .g{font-weight:800}
 @media(max-width:520px){.notice{flex-direction:column;gap:12px}}
 
 /* Bônus: curso de IA */
-.bonus{display:grid;gap:28px;align-items:center;border:1px solid rgba(53,224,122,.4);background:linear-gradient(135deg,rgba(53,224,122,.08),var(--card) 55%);border-radius:28px;padding:20px;box-shadow:0 0 120px -50px var(--glow)}
+/* O bloco do curso de IA usa a paleta azul neon do curso de IA */
+.bonus{--green:#2fb4ff;--green-dim:#127fd6;--green-light:#8fd3ff;--on-green:#021426;--glow:#2fb4ff99;--glow-soft:#2fb4ff4d;--card:#0b111b;--line:#1c2b3d;--muted:#93a4b8;
+  display:grid;gap:28px;align-items:center;border:1px solid rgba(47,180,255,.45);background:linear-gradient(135deg,rgba(47,180,255,.12),var(--card) 55%);border-radius:28px;padding:20px;box-shadow:0 0 120px -40px var(--glow)}
+.bonus .cta{border-color:rgba(47,180,255,.6)}
+.bonus .cta:hover{background:#1a8be8;box-shadow:0 0 0 4px rgba(47,180,255,.15),0 14px 50px -8px var(--glow)}
 @media(min-width:900px){.bonus{grid-template-columns:1.05fr .95fr;gap:44px;padding:32px}}
 .bonus-tag{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:var(--on-green);border-radius:999px;padding:6px 14px;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
 .bonus h2.display{font-size:clamp(34px,4.6vw,52px);margin-top:16px;line-height:1}
@@ -165,10 +169,10 @@ h1 .g{font-weight:800}
 .bonus .list{margin-top:18px}
 .bonus-ctas{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-top:26px}
 @media(max-width:639px){.bonus .cta{font-size:18px;padding:18px 16px}}
-.link-more{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--green);border-bottom:1px solid rgba(53,224,122,.4);padding-bottom:2px}
+.link-more{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--green);border-bottom:1px solid var(--glow-soft);padding-bottom:2px}
 .link-more:hover{color:var(--ink)}
 /* Espaço de imagem: mostra o aviso enquanto o arquivo não existir */
-.slot{position:relative;display:block;width:100%;border:1px solid rgba(53,224,122,.35);border-radius:20px;overflow:hidden;background:radial-gradient(60% 60% at 50% 40%,#123d24,transparent 70%),var(--bg-2)}
+.slot{position:relative;display:block;width:100%;border:1px solid var(--glow-soft);border-radius:20px;overflow:hidden;background:radial-gradient(60% 60% at 50% 40%,#0d2c4a,transparent 70%),#070b12}
 .slot img{width:100%;height:100%;object-fit:cover}
 .slot .ph{display:none;position:absolute;inset:0;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:16px;text-align:center;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .slot .ph b{font-family:var(--sans);font-size:14px;letter-spacing:0;text-transform:none;color:var(--ink)}
@@ -488,6 +492,7 @@ ttq.page();
         <h2 class="display">Junto com o curso: <span class="g">se torne um engenheiro de IA em 30 dias</span></h2>
         <p>Quem entra no Hacker Ético leva também o curso de Inteligência Artificial, sem pagar nada a mais. Aprenda como a cibersegurança e a inteligência artificial operam juntas para proteger sistemas.</p>
         <ul class="list">
+          <li>Do zero até pensar como um engenheiro de IA</li>
           <li>Como a IA ajuda a detectar ataques e analisar falhas mais rápido</li>
           <li>Os novos riscos dos sistemas que usam IA e como protegê-los</li>
           <li>A IA como sua copiloto no dia a dia da segurança</li>

@@ -8,17 +8,18 @@
 <meta property="og:title" content="Se torne um Engenheiro de IA em 30 dias">
 <meta property="og:description" content="Cibersegurança e inteligência artificial juntas para proteger sistemas. Bônus do Hacker Ético em 30 dias.">
 <meta property="og:image" content="imagem/ia/capa-ia.jpg">
-<meta name="theme-color" content="#050505">
+<meta name="theme-color" content="#03060b">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#050505; --bg-2:#090b0a; --card:#0e1210;
-  --line:#233027; --line-soft:#161d18;
-  --ink:#f0f6f1; --muted:#96a69b;
-  --green:#35e07a; --green-dim:#1fa85a; --green-light:#8be09a; --green-deep:#0a4a24;
-  --on-green:#04150b; --glow:#35e07a99; --glow-soft:#35e07a4d;
+  /* Paleta do curso de IA: azul neon */
+  --bg:#03060b; --bg-2:#070b12; --card:#0b111b;
+  --line:#1c2b3d; --line-soft:#121b27;
+  --ink:#eef5ff; --muted:#93a4b8;
+  --accent:#2fb4ff; --accent-dim:#127fd6; --accent-light:#8fd3ff; --accent-deep:#0a2c4d;
+  --on-accent:#021426; --glow:#2fb4ff99; --glow-soft:#2fb4ff4d;
   --display:"Anton",Impact,"Arial Narrow",sans-serif;
   --sans:"Inter",system-ui,-apple-system,sans-serif;
   --mono:"JetBrains Mono",ui-monospace,"SF Mono",monospace;
@@ -30,10 +31,10 @@ img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 .wrap{width:100%;max-width:1120px;margin-inline:auto;padding-inline:20px}
 @media(min-width:640px){.wrap{padding-inline:32px}}
-.g{color:var(--green)}
+.g{color:var(--accent)}
 .display{font-family:var(--display);text-transform:uppercase;font-weight:400;line-height:.95;letter-spacing:.005em}
-.eyebrow{font-family:var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--green);font-size:11px}
-.dot{display:inline-block;background:var(--green);width:8px;height:8px;border-radius:999px;box-shadow:0 0 12px 2px var(--glow);animation:blink 2s ease-in-out infinite}
+.eyebrow{font-family:var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-size:11px}
+.dot{display:inline-block;background:var(--accent);width:8px;height:8px;border-radius:999px;box-shadow:0 0 12px 2px var(--glow);animation:blink 2s ease-in-out infinite}
 @keyframes blink{50%{opacity:.35}}
 section{position:relative}
 .sec{padding:80px 0}
@@ -45,10 +46,10 @@ h2.display{font-size:clamp(40px,7vw,80px);margin-top:20px}
 /* CTA */
 .cta{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;
   font-family:var(--display);text-transform:uppercase;letter-spacing:.04em;line-height:1;
-  background:var(--green-dim);color:#fff;border-radius:12px;padding:20px 32px;font-size:20px;
-  border:1.5px solid rgba(53,224,122,.6);box-shadow:0 0 0 0 var(--glow),0 10px 40px -10px var(--glow);
+  background:var(--accent-dim);color:#fff;border-radius:12px;padding:20px 32px;font-size:20px;
+  border:1.5px solid rgba(47,180,255,.6);box-shadow:0 0 0 0 var(--glow),0 10px 40px -10px var(--glow);
   transition:transform .2s, box-shadow .2s, background .2s;overflow:hidden;text-align:center}
-.cta:hover{transform:translateY(-2px);background:#22b862;box-shadow:0 0 0 4px rgba(53,224,122,.15),0 14px 50px -8px var(--glow)}
+.cta:hover{transform:translateY(-2px);background:#1a8be8;box-shadow:0 0 0 4px rgba(47,180,255,.15),0 14px 50px -8px var(--glow)}
 .cta:after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.28) 50%,transparent 70%);transform:translateX(-100%);animation:shine 3.2s ease-in-out infinite}
 @keyframes shine{60%,100%{transform:translateX(100%)}}
 .cta-full{width:100%}
@@ -59,10 +60,10 @@ header{border-bottom:1px solid var(--line-soft);background:var(--bg)}
 .hdr{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:16px}
 .logo{font-family:var(--display);text-transform:uppercase;font-size:22px;line-height:1}
 .back{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:8px 14px;white-space:nowrap}
-.back:hover{color:var(--ink);border-color:rgba(53,224,122,.4)}
+.back:hover{color:var(--ink);border-color:rgba(47,180,255,.4)}
 
 /* Espaço de imagem: mostra o aviso enquanto o arquivo não existir */
-.slot{position:relative;display:block;width:100%;border:1px solid rgba(53,224,122,.35);border-radius:24px;overflow:hidden;background:radial-gradient(60% 60% at 50% 40%,#123d24,transparent 70%),var(--bg-2)}
+.slot{position:relative;display:block;width:100%;border:1px solid rgba(47,180,255,.35);border-radius:24px;overflow:hidden;background:radial-gradient(60% 60% at 50% 40%,#0d2c4a,transparent 70%),var(--bg-2)}
 .slot img{width:100%;height:100%;object-fit:cover}
 .slot .ph{display:none;position:absolute;inset:0;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:16px;text-align:center;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .slot .ph b{font-family:var(--sans);font-size:14px;letter-spacing:0;text-transform:none;color:var(--ink)}
@@ -73,27 +74,23 @@ header{border-bottom:1px solid var(--line-soft);background:var(--bg)}
 /* Hero */
 .hero{overflow:hidden}
 .hero:before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(75% 40% at 50% 30%,var(--glow-soft),transparent 72%)}
-.hero-in{position:relative;display:grid;gap:32px;align-items:center;padding-block:40px 64px}
-.hero .slot{max-width:480px;margin:0 auto;aspect-ratio:4/5;box-shadow:0 0 90px -30px var(--glow)}
-.hero-txt{text-align:center}
-.badge-top{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(53,224,122,.35);background:rgba(14,18,16,.8);border-radius:999px;padding:6px 14px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--green-light);margin-bottom:18px}
+.hero-in{position:relative;display:flex;flex-direction:column;align-items:center;gap:36px;padding-block:48px 72px}
+.hero-txt{text-align:center;max-width:760px}
+.hero .slot{max-width:1040px;aspect-ratio:16/9;box-shadow:0 0 120px -30px var(--glow),0 30px 60px -30px #000;transition:transform .3s}
+.hero .slot:hover{transform:translateY(-3px)}
+.badge-top{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(47,180,255,.35);background:rgba(14,18,16,.8);border-radius:999px;padding:6px 14px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-light);margin-bottom:18px}
 h1{font-size:clamp(36px,9.6vw,64px);font-weight:600;line-height:1.06;letter-spacing:-.02em}
 h1 .g{font-weight:800}
 .sub{max-width:520px;margin:16px auto 0;font-size:17px;font-weight:500;line-height:1.4;color:rgba(240,246,241,.85)}
 @media(min-width:640px){.sub{font-size:19px}}
 .free{margin-top:24px;display:inline-flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center}
-.free .big{font-family:var(--display);font-size:52px;line-height:1;color:var(--green);text-shadow:0 0 30px var(--glow-soft);text-transform:uppercase}
+.free .big{font-family:var(--display);font-size:52px;line-height:1;color:var(--accent);text-shadow:0 0 30px var(--glow-soft);text-transform:uppercase}
 .free .side{text-align:left;font-size:13px;color:var(--muted);line-height:1.35}
 .free .side strong{color:var(--ink);font-size:15px}
 .hero-cta{margin-top:22px}
 .hero-cta p{margin-top:12px;font-size:12px;color:var(--muted)}
 @media(min-width:1024px){
-  .hero:before{background:radial-gradient(40% 60% at 72% 50%,var(--glow-soft),transparent 72%)}
-  .hero-in{grid-template-columns:1.05fr .95fr;gap:48px;padding-block:64px;min-height:calc(100svh - 70px)}
-  .hero .slot{order:2;max-width:520px;margin:0 0 0 auto}
-  .hero-txt{order:1;text-align:left}
-  .sub{margin-left:0}
-  .free{justify-content:flex-start}
+  .hero-in{gap:48px;padding-block:64px 96px}
 }
 
 /* Cards */
@@ -102,9 +99,27 @@ h1 .g{font-weight:800}
 .grid2{display:grid;gap:16px;margin-top:48px}
 @media(min-width:768px){.grid2{grid-template-columns:1fr 1fr}}
 .card{border:1px solid var(--line);background:var(--card);border-radius:20px;padding:26px}
-.card .num{font-family:var(--display);font-size:40px;color:var(--green);line-height:1}
+.card .num{font-family:var(--display);font-size:40px;color:var(--accent);line-height:1}
 .card h3{font-size:18px;margin-top:12px}
 .card p{color:var(--muted);font-size:15px;margin-top:8px}
+
+/* Trilha: do zero ao engenheiro de IA */
+.trail{display:grid;gap:16px;margin-top:48px}
+@media(min-width:640px){.trail{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.trail{grid-template-columns:repeat(4,1fr)}}
+.step{display:flex;flex-direction:column;gap:10px;border:1px solid var(--line);background:var(--card);border-radius:20px;padding:24px}
+.step .bar{height:6px;border-radius:999px;background:var(--line);overflow:hidden}
+.step .bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--accent-dim),var(--accent));box-shadow:0 0 14px var(--glow)}
+.step .lvl{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-top:8px}
+.step h3{font-family:var(--display);text-transform:uppercase;font-weight:400;font-size:28px;line-height:1.05}
+.step p{color:var(--muted);font-size:15px}
+.step.top{border-color:rgba(47,180,255,.6);background:linear-gradient(160deg,rgba(47,180,255,.16),var(--card) 70%);box-shadow:0 0 70px -24px var(--glow)}
+.step.top h3{color:var(--accent)}
+.mindset{display:flex;gap:18px;align-items:flex-start;max-width:860px;margin:32px auto 0;border:1px solid rgba(47,180,255,.45);background:linear-gradient(135deg,rgba(47,180,255,.10),rgba(11,17,27,.9) 60%);border-radius:20px;padding:24px;box-shadow:0 0 80px -40px var(--glow)}
+.mindset svg{width:40px;height:40px;flex-shrink:0;color:var(--accent)}
+.mindset p{color:rgba(238,245,255,.88);font-size:16px}
+.mindset p strong{color:var(--ink)}
+@media(max-width:520px){.mindset{flex-direction:column;gap:12px}}
 
 /* Galeria */
 .gallery{display:grid;gap:16px;margin-top:48px}
@@ -113,23 +128,23 @@ h1 .g{font-weight:800}
 
 /* Oferta */
 .offer{max-width:760px}
-.box{border:1px solid rgba(53,224,122,.4);background:var(--card);border-radius:24px;padding:22px;box-shadow:0 0 120px -40px var(--glow);margin-top:40px}
+.box{border:1px solid rgba(47,180,255,.4);background:var(--card);border-radius:24px;padding:22px;box-shadow:0 0 120px -40px var(--glow);margin-top:40px}
 @media(min-width:640px){.box{padding:34px}}
 .duo{display:grid;gap:12px}
 @media(min-width:640px){.duo{grid-template-columns:1fr auto 1fr;align-items:stretch}}
 .duo .c{border:1px solid var(--line);background:var(--bg-2);border-radius:16px;padding:20px;text-align:center}
-.duo .c.bonus{border-color:rgba(53,224,122,.5);background:rgba(53,224,122,.07)}
+.duo .c.bonus{border-color:rgba(47,180,255,.5);background:rgba(47,180,255,.07)}
 .duo .c span{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-.duo .c.bonus span{color:var(--green)}
+.duo .c.bonus span{color:var(--accent)}
 .duo .c h3{font-family:var(--display);text-transform:uppercase;font-weight:400;font-size:26px;line-height:1.05;margin-top:8px}
 .duo .c p{color:var(--muted);font-size:14px;margin-top:6px}
-.duo .plus{display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:36px;color:var(--green)}
+.duo .plus{display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:36px;color:var(--accent)}
 .price-box{margin-top:26px;border-top:1px dashed var(--line);padding-top:26px;text-align:center}
 .pb-label{font-size:14px;color:var(--muted)}
-.pb-big{font-family:var(--display);color:var(--green);line-height:.9;font-size:clamp(96px,22vw,150px);text-shadow:0 0 50px var(--glow-soft);margin-top:4px}
+.pb-big{font-family:var(--display);color:var(--accent);line-height:.9;font-size:clamp(96px,22vw,150px);text-shadow:0 0 50px var(--glow-soft);margin-top:4px}
 .pb-big sup{font-size:.3em;vertical-align:top;position:relative;top:.35em;margin-right:6px}
 .pb-alt{font-size:17px;margin-top:8px}
-.pb-alt strong{color:var(--green)}
+.pb-alt strong{color:var(--accent)}
 .price-box .cta{margin-top:22px}
 .pb-foot{margin-top:12px;font-size:12px;color:var(--muted)}
 
@@ -146,7 +161,7 @@ footer p+p{margin-top:8px;max-width:640px;margin-inline:auto}
 .sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(5,5,5,.92);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 16px;display:flex;align-items:center;gap:12px;transform:translateY(110%);transition:transform .3s}
 .sticky.show{transform:none}
 .sticky .sp{line-height:1.15}
-.sticky .sp strong{font-family:var(--display);font-weight:400;color:var(--green);font-size:26px}
+.sticky .sp strong{font-family:var(--display);font-weight:400;color:var(--accent);font-size:26px}
 .sticky .sp span{display:block;font-size:11px;color:var(--muted)}
 .sticky .cta{flex:1;padding:14px 12px;font-size:16px}
 @media(min-width:768px){.sticky{display:none}}
@@ -185,11 +200,6 @@ ttq.page();
 <!-- ==================== HERO ==================== -->
 <section id="top" class="hero">
   <div class="wrap hero-in">
-    <!-- Imagem: coloque o arquivo em imagem/ia/hero-ia.jpg (1080 × 1350, vertical) -->
-    <div class="slot">
-      <img src="imagem/ia/hero-ia.jpg" alt="Curso Se torne um Engenheiro de IA em 30 dias" width="1080" height="1350" fetchpriority="high" onerror="this.parentNode.classList.add('empty')">
-      <span class="ph"><b>Imagem principal do curso de IA</b>imagem/ia/hero-ia.jpg · 1080 × 1350</span>
-    </div>
     <div class="hero-txt">
       <span class="badge-top"><span class="dot"></span> Bônus do Hacker Ético em 30 dias</span>
       <h1>Se torne um <span class="g">engenheiro de IA</span> em 30 dias</h1>
@@ -204,6 +214,32 @@ ttq.page();
         <a class="cta cta-full js-checkout" href="#" target="_blank" rel="noopener">Quero os 2 cursos por R$ 97</a>
         <p>Pagamento único · 7 dias de garantia · Acesso imediato</p>
       </div>
+    </div>
+    <!-- Banner do curso: imagem/ia/capa-ia.jpg (1600 × 900) -->
+    <a class="slot js-checkout" href="#" target="_blank" rel="noopener" aria-label="Começar o curso de Inteligência Artificial">
+      <img src="imagem/ia/capa-ia.jpg" alt="Curso online de Inteligência Artificial: do zero ao engenheiro de IA. Fundamentos da IA, IA no dia a dia e mentalidade de engenheiro de IA" width="1600" height="900" fetchpriority="high" onerror="this.parentNode.classList.add('empty')">
+      <span class="ph"><b>Banner do curso de IA</b>imagem/ia/capa-ia.jpg · 1600 × 900</span>
+    </a>
+  </div>
+</section>
+
+<!-- ==================== DO ZERO AO ENGENHEIRO DE IA ==================== -->
+<section id="trilha" class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="center reveal">
+      <p class="eyebrow">A sua evolução</p>
+      <h2 class="display">Do zero até pensar como um <span class="g">engenheiro de IA</span></h2>
+      <p class="lead">Você não precisa saber nada de inteligência artificial para começar. O curso te leva passo a passo, do primeiro conceito até a forma de pensar de quem constrói sistemas com IA.</p>
+    </div>
+    <div class="trail">
+      <div class="step reveal"><div class="bar"><i style="width:25%"></i></div><span class="lvl">Etapa 01 · Do zero</span><h3>Entender</h3><p>O que é inteligência artificial, como ela aprende e onde ela já está no seu dia a dia.</p></div>
+      <div class="step reveal"><div class="bar"><i style="width:50%"></i></div><span class="lvl">Etapa 02</span><h3>Usar</h3><p>A IA como ferramenta de trabalho: onde ela acerta, onde ela erra e como tirar o melhor dela.</p></div>
+      <div class="step reveal"><div class="bar"><i style="width:75%"></i></div><span class="lvl">Etapa 03</span><h3>Proteger</h3><p>Os riscos dos sistemas com IA e como a cibersegurança entra para protegê-los.</p></div>
+      <div class="step top reveal"><div class="bar"><i style="width:100%"></i></div><span class="lvl">Etapa 04 · Engenheiro de IA</span><h3>Pensar como engenheiro</h3><p>Olhar para um problema e saber como a IA pode resolvê-lo, com segurança desde o início.</p></div>
+    </div>
+    <div class="mindset reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="14" height="14" rx="2"/><path d="M9 9h6v6H9zM9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></svg>
+      <p><strong>Ao final, você não só usa IA.</strong> Você entende como ela funciona, onde ela falha e como construir com ela de forma segura. É isso que separa quem usa uma ferramenta de quem pensa como um engenheiro de IA.</p>
     </div>
   </div>
 </section>
